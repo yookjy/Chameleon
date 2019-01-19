@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChameleonLib</RootNamespace>
+    <AssemblyName>Chameleon</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>ko</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Chameleon_Release_AnyCPU.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Chameleon.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;DEBUG_AGENT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AppListPage.xaml.cs">
+      <DependentUpon>AppListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DomainFilterPage.xaml.cs">
+      <DependentUpon>DomainFilterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FlashlightPage.xaml.cs">
+      <DependentUpon>FlashlightPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Helper\PageHelper.cs" />
+    <Compile Include="View\ImageDownloadPage.xaml.cs">
+      <DependentUpon>ImageDownloadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPageLivetile.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPageCalendar.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPageLockScreen.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPageScheduledTask.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPageWeather.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AlbumPage.xaml.cs">
+      <DependentUpon>AlbumPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LockscreenSelectionPage.xaml.cs">
+      <DependentUpon>LockscreenSelectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PictureEditPage.xaml.cs">
+      <DependentUpon>PictureEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PicturePage.xaml.cs">
+      <DependentUpon>PicturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrivacyPolicyPage.xaml.cs">
+      <DependentUpon>PrivacyPolicyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchCityPage.xaml.cs">
+      <DependentUpon>SearchCityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingImagePage.xaml.cs">
+      <DependentUpon>SettingImagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="View\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AppListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DomainFilterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FlashlightPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ImageDownloadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AlbumPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LockscreenSelectionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PictureEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PicturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrivacyPolicyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SearchCityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingImagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chameleon_159.png" />
+    <Content Include="Chameleon_336.png" />
+    <Content Include="Images\dark\appbar.battery.pin.png" />
+    <Content Include="Images\dark\appbar.close.png" />
+    <Content Include="Images\dark\appbar.customerservice.png" />
+    <Content Include="Images\dark\appbar.door.leave.png" />
+    <Content Include="Images\dark\appbar.home.empty.png" />
+    <Content Include="Images\dark\appbar.home.variant.enter.png" />
+    <Content Include="Images\dark\appbar.moon.png" />
+    <Content Include="Images\dark\appbar.power.big.png" />
+    <Content Include="Images\dark\appbar.reply.email.png" />
+    <Content Include="Images\dark\appbar.settings.png" />
+    <Content Include="Images\dark\appbar.share.png" />
+    <Content Include="Images\dark\appbar.social.facebook.variant.png" />
+    <Content Include="Images\dark\appbar.star.png" />
+    <Content Include="Images\dark\appbar.weather.pin.png" />
+    <Content Include="Images\dark\appbar.weather.sun.png" />
+    <Content Include="Images\dark\weather.iconpack.normal.png" />
+    <Content Include="Images\light\appbar.battery.pin.png" />
+    <Content Include="Images\dark\appbar.calendar.pin.png" />
+    <Content Include="Images\light\appbar.calendar.pin.png" />
+    <Content Include="Images\light\appbar.close.png" />
+    <Content Include="Images\light\appbar.customerservice.png" />
+    <Content Include="Images\light\appbar.door.leave.png" />
+    <Content Include="Images\light\appbar.home.empty.png" />
+    <Content Include="Images\light\appbar.home.variant.enter.png" />
+    <Content Include="Images\light\appbar.moon.png" />
+    <Content Include="Images\light\appbar.pin.png" />
+    <Content Include="Images\dark\appbar.pin.png" />
+    <Content Include="Images\light\appbar.power.big.png" />
+    <Content Include="Images\light\appbar.reply.email.png" />
+    <Content Include="Images\light\appbar.settings.png" />
+    <Content Include="Images\light\appbar.share.png" />
+    <Content Include="Images\light\appbar.social.facebook.variant.png" />
+    <Content Include="Images\light\appbar.star.png" />
+    <Content Include="Images\light\appbar.weather.pin.png" />
+    <Content Include="Images\light\appbar.weather.sun.png" />
+    <Content Include="Images\light\weather.iconpack.normal.png" />
+    <Content Include="Images\light\weather.iconpack.simple01.png" />
+    <Content Include="Images\dark\weather.iconpack.simple01.png" />
+    <Content Include="Images\livetile\flash.png" />
+    <Content Include="Images\livetile\battery.png" />
+    <Content Include="Images\lockscreen\appbar.transit.hazard.png" />
+    <Content Include="Images\lockscreen\lockscreen.current.png" />
+    <None Include="packages.config" />
+    <None Include="Privacy-policy\docs\README_AppPrivacy.pdf" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DefaultLockScreen.jpg" />
+    <Content Include="Images\calendar\appointment.other.png" />
+    <Content Include="Images\calendar\appointment.outlook.png" />
+    <Content Include="Images\calendar\appointment.phone.png" />
+    <Content Include="Images\calendar\appointment.windowslive.png" />
+    <Content Include="Images\calendar\appointment.google.png" />
+    <Content Include="Images\calendar\appointment.facebook.png" />
+    <Content Include="Images\dark\appbar.corner.png" />
+    <Content Include="Images\dark\appbar.transform.rotate.clockwise.png" />
+    <Content Include="Images\dark\calendar.refresh.png" />
+    <Content Include="Images\dark\weather.refresh.png" />
+    <Content Include="Images\dark\appbar.add.png" />
+    <Content Include="Images\dark\appbar.cancel.png" />
+    <Content Include="Images\dark\appbar.check.png" />
+    <Content Include="Images\dark\appbar.crop.png" />
+    <Content Include="Images\dark\appbar.delete.png" />
+    <Content Include="Images\dark\appbar.edit.png" />
+    <Content Include="Images\dark\appbar.layer.add.png" />
+    <Content Include="Images\dark\appbar.list.add.below.png" />
+    <Content Include="Images\dark\appbar.list.check.png" />
+    <Content Include="Images\dark\appbar.location.png" />
+    <Content Include="Images\dark\appbar.magnify.png" />
+    <Content Include="Images\dark\appbar.save.png" />
+    <Content Include="Images\dark\appbar.transform.flip.horizontal.png" />
+    <Content Include="Images\dark\appbar.transform.flip.vertical.png" />
+    <Content Include="Images\dark\appbar.transform.rotate.left.png" />
+    <Content Include="Images\dark\appbar.transform.rotate.right.png" />
+    <Content Include="Images\dark\appbar.windowsphone.png" />
+    <Content Include="Images\light\appbar.add.png" />
+    <Content Include="Images\light\appbar.cancel.png" />
+    <Content Include="Images\light\appbar.check.png" />
+    <Content Include="Images\light\appbar.corner.png" />
+    <Content Include="Images\light\appbar.crop.png" />
+    <Content Include="Images\dark\appbar.download.png" />
+    <Content Include="Images\light\appbar.delete.png" />
+    <Content Include="Images\light\appbar.edit.png" />
+    <Content Include="Images\light\appbar.download.png" />
+    <Content Include="Images\light\appbar.layer.add.png" />
+    <Content Include="Images\light\appbar.list.add.below.png" />
+    <Content Include="Images\light\appbar.list.check.png" />
+    <Content Include="Images\light\appbar.location.png" />
+    <Content Include="Images\light\appbar.magnify.png" />
+    <Content Include="Images\light\appbar.save.png" />
+    <Content Include="Images\light\appbar.transform.flip.horizontal.png" />
+    <Content Include="Images\light\appbar.transform.flip.vertical.png" />
+    <Content Include="Images\light\appbar.transform.rotate.clockwise.png" />
+    <Content Include="Images\light\appbar.transform.rotate.left.png" />
+    <Content Include="Images\light\appbar.transform.rotate.right.png" />
+    <Content Include="Images\light\appbar.windowsphone.png" />
+    <Content Include="Images\light\calendar.refresh.png" />
+    <Content Include="Images\light\weather.refresh.png" />
+    <Content Include="Images\lockscreen\battery.empty.png" />
+    <Content Include="Images\lockscreen\battery.plugged.png" />
+    <Content Include="Images\lockscreen\battery.full.png" />
+    <Content Include="Images\lockscreen\battery.png" />
+    <Content Include="Images\lockscreen\template.battery.png" />
+    <Content Include="Images\lockscreen\template.calendar.png" />
+    <Content Include="Images\lockscreen\template.weather.png" />
+    <Content Include="Images\lockscreen\water.png" />
+    <Content Include="Images\lockscreen\wind.png" />
+    <Content Include="Images\lockscreen\download.error.png" />
+    <Content Include="Images\lockscreen\template.forecast.png" />
+    <Content Include="Images\lockscreen\template.noforecast.png" />
+    <Content Include="Images\search\bing.png" />
+    <Content Include="Images\search\nasa.png" />
+    <Content Include="Images\weather\normal\125x105\cond000.png" />
+    <Content Include="Images\weather\normal\125x105\cond001.png" />
+    <Content Include="Images\weather\normal\125x105\cond002.png" />
+    <Content Include="Images\weather\normal\125x105\cond003.png" />
+    <Content Include="Images\weather\normal\125x105\cond004.png" />
+    <Content Include="Images\weather\normal\125x105\cond005.png" />
+    <Content Include="Images\weather\normal\125x105\cond006.png" />
+    <Content Include="Images\weather\normal\125x105\cond008.png" />
+    <Content Include="Images\weather\normal\125x105\cond009.png" />
+    <Content Include="Images\weather\normal\125x105\cond010.png" />
+    <Content Include="Images\weather\normal\125x105\cond017.png" />
+    <Content Include="Images\weather\normal\125x105\cond023.png" />
+    <Content Include="Images\weather\normal\125x105\cond024.png" />
+    <Content Include="Images\weather\normal\125x105\cond025.png" />
+    <Content Include="Images\weather\normal\125x105\cond032.png" />
+    <Content Include="Images\weather\normal\125x105\cond033.png" />
+    <Content Include="Images\weather\normal\125x105\cond034.png" />
+    <Content Include="Images\weather\normal\125x105\cond035.png" />
+    <Content Include="Images\weather\normal\125x105\cond040.png" />
+    <Content Include="Images\weather\normal\125x105\cond041.png" />
+    <Content Include="Images\weather\normal\125x105\cond045.png" />
+    <Content Include="Images\weather\normal\125x105\cond047.png" />
+    <Content Include="Images\weather\normal\125x105\cond050.png" />
+    <Content Include="Images\weather\normal\125x105\cond051.png" />
+    <Content Include="Images\weather\normal\125x105\cond052.png" />
+    <Content Include="Images\weather\normal\125x105\cond053.png" />
+    <Content Include="Images\weather\normal\125x105\cond054.png" />
+    <Content Include="Images\weather\normal\125x105\cond056.png" />
+    <Content Include="Images\weather\normal\125x105\cond058.png" />
+    <Content Include="Images\weather\normal\125x105\cond062.png" />
+    <Content Include="Images\weather\normal\125x105\cond064.png" />
+    <Content Include="Images\weather\normal\125x105\cond065.png" />
+    <Content Include="Images\weather\normal\125x105\cond066.png" />
+    <Content Include="Images\weather\normal\125x105\cond067.png" />
+    <Content Include="Images\weather\normal\125x105\cond068.png" />
+    <Content Include="Images\weather\normal\125x105\cond069.png" />
+    <Content Include="Images\weather\normal\125x105\cond071.png" />
+    <Content Include="Images\weather\normal\125x105\cond072.png" />
+    <Content Include="Images\weather\normal\125x105\cond073.png" />
+    <Content Include="Images\weather\normal\125x105\cond074.png" />
+    <Content Include="Images\weather\normal\125x105\cond075.png" />
+    <Content Include="Images\weather\normal\125x105\cond076.png" />
+    <Content Include="Images\weather\normal\125x105\cond077.png" />
+    <Content Include="Images\weather\normal\205x172\cond000.png" />
+    <Content Include="Images\weather\normal\205x172\cond001.png" />
+    <Content Include="Images\weather\normal\205x172\cond002.png" />
+    <Content Include="Images\weather\normal\205x172\cond003.png" />
+    <Content Include="Images\weather\normal\205x172\cond004.png" />
+    <Content Include="Images\weather\normal\205x172\cond005.png" />
+    <Content Include="Images\weather\normal\205x172\cond006.png" />
+    <Content Include="Images\weather\normal\205x172\cond008.png" />
+    <Content Include="Images\weather\normal\205x172\cond009.png" />
+    <Content Include="Images\weather\normal\205x172\cond010.png" />
+    <Content Include="Images\weather\normal\205x172\cond017.png" />
+    <Content Include="Images\weather\normal\205x172\cond023.png" />
+    <Content Include="Images\weather\normal\205x172\cond024.png" />
+    <Content Include="Images\weather\normal\205x172\cond025.png" />
+    <Content Include="Images\weather\normal\205x172\cond032.png" />
+    <Content Include="Images\weather\normal\205x172\cond033.png" />
+    <Content Include="Images\weather\normal\205x172\cond034.png" />
+    <Content Include="Images\weather\normal\205x172\cond035.png" />
+    <Content Include="Images\weather\normal\205x172\cond040.png" />
+    <Content Include="Images\weather\normal\205x172\cond041.png" />
+    <Content Include="Images\weather\normal\205x172\cond045.png" />
+    <Content Include="Images\weather\normal\205x172\cond047.png" />
+    <Content Include="Images\weather\normal\205x172\cond050.png" />
+    <Content Include="Images\weather\normal\205x172\cond051.png" />
+    <Content Include="Images\weather\normal\205x172\cond052.png" />
+    <Content Include="Images\weather\normal\205x172\cond053.png" />
+    <Content Include="Images\weather\normal\205x172\cond054.png" />
+    <Content Include="Images\weather\normal\205x172\cond056.png" />
+    <Content Include="Images\weather\normal\205x172\cond058.png" />
+    <Content Include="Images\weather\normal\205x172\cond062.png" />
+    <Content Include="Images\weather\normal\205x172\cond064.png" />
+    <Content Include="Images\weather\normal\205x172\cond065.png" />
+    <Content Include="Images\weather\normal\205x172\cond066.png" />
+    <Content Include="Images\weather\normal\205x172\cond067.png" />
+    <Content Include="Images\weather\normal\205x172\cond068.png" />
+    <Content Include="Images\weather\normal\205x172\cond069.png" />
+    <Content Include="Images\weather\normal\205x172\cond071.png" />
+    <Content Include="Images\weather\normal\205x172\cond072.png" />
+    <Content Include="Images\weather\normal\205x172\cond073.png" />
+    <Content Include="Images\weather\normal\205x172\cond074.png" />
+    <Content Include="Images\weather\normal\205x172\cond075.png" />
+    <Content Include="Images\weather\normal\205x172\cond076.png" />
+    <Content Include="Images\weather\normal\205x172\cond077.png" />
+    <Content Include="Images\weather\normal\80x67\cond000.png" />
+    <Content Include="Images\weather\normal\80x67\cond001.png" />
+    <Content Include="Images\weather\normal\80x67\cond002.png" />
+    <Content Include="Images\weather\normal\80x67\cond003.png" />
+    <Content Include="Images\weather\normal\80x67\cond004.png" />
+    <Content Include="Images\weather\normal\80x67\cond005.png" />
+    <Content Include="Images\weather\normal\80x67\cond006.png" />
+    <Content Include="Images\weather\normal\80x67\cond008.png" />
+    <Content Include="Images\weather\normal\80x67\cond009.png" />
+    <Content Include="Images\weather\normal\80x67\cond010.png" />
+    <Content Include="Images\weather\normal\80x67\cond017.png" />
+    <Content Include="Images\weather\normal\80x67\cond023.png" />
+    <Content Include="Images\weather\normal\80x67\cond024.png" />
+    <Content Include="Images\weather\normal\80x67\cond025.png" />
+    <Content Include="Images\weather\normal\80x67\cond032.png" />
+    <Content Include="Images\weather\normal\80x67\cond033.png" />
+    <Content Include="Images\weather\normal\80x67\cond034.png" />
+    <Content Include="Images\weather\normal\80x67\cond035.png" />
+    <Content Include="Images\weather\normal\80x67\cond040.png" />
+    <Content Include="Images\weather\normal\80x67\cond041.png" />
+    <Content Include="Images\weather\normal\80x67\cond045.png" />
+    <Content Include="Images\weather\normal\80x67\cond047.png" />
+    <Content Include="Images\weather\normal\80x67\cond050.png" />
+    <Content Include="Images\weather\normal\80x67\cond051.png" />
+    <Content Include="Images\weather\normal\80x67\cond052.png" />
+    <Content Include="Images\weather\normal\80x67\cond053.png" />
+    <Content Include="Images\weather\normal\80x67\cond054.png" />
+    <Content Include="Images\weather\normal\80x67\cond056.png" />
+    <Content Include="Images\weather\normal\80x67\cond058.png" />
+    <Content Include="Images\weather\normal\80x67\cond062.png" />
+    <Content Include="Images\weather\normal\80x67\cond064.png" />
+    <Content Include="Images\weather\normal\80x67\cond065.png" />
+    <Content Include="Images\weather\normal\80x67\cond066.png" />
+    <Content Include="Images\weather\normal\80x67\cond067.png" />
+    <Content Include="Images\weather\normal\80x67\cond068.png" />
+    <Content Include="Images\weather\normal\80x67\cond069.png" />
+    <Content Include="Images\weather\normal\80x67\cond071.png" />
+    <Content Include="Images\weather\normal\80x67\cond072.png" />
+    <Content Include="Images\weather\normal\80x67\cond073.png" />
+    <Content Include="Images\weather\normal\80x67\cond074.png" />
+    <Content Include="Images\weather\normal\80x67\cond075.png" />
+    <Content Include="Images\weather\normal\80x67\cond076.png" />
+    <Content Include="Images\weather\normal\80x67\cond077.png" />
+    <Content Include="Images\light\sync.png" />
+    <Content Include="Images\dark\sync.png" />
+    <Content Include="Images\weather\simple01\125x105\cond000.png" />
+    <Content Include="Images\weather\simple01\125x105\cond001.png" />
+    <Content Include="Images\weather\simple01\125x105\cond002.png" />
+    <Content Include="Images\weather\simple01\125x105\cond004.png" />
+    <Content Include="Images\weather\simple01\125x105\cond005.png" />
+    <Content Include="Images\weather\simple01\125x105\cond006.png" />
+    <Content Include="Images\weather\simple01\125x105\cond008.png" />
+    <Content Include="Images\weather\simple01\125x105\cond009.png" />
+    <Content Include="Images\weather\simple01\125x105\cond010.png" />
+    <Content Include="Images\weather\simple01\125x105\cond017.png" />
+    <Content Include="Images\weather\simple01\125x105\cond023.png" />
+    <Content Include="Images\weather\simple01\125x105\cond025.png" />
+    <Content Include="Images\weather\simple01\125x105\cond033.png" />
+    <Content Include="Images\weather\simple01\125x105\cond034.png" />
+    <Content Include="Images\weather\simple01\125x105\cond040.png" />
+    <Content Include="Images\weather\simple01\125x105\cond041.png" />
+    <Content Include="Images\weather\simple01\125x105\cond045.png" />
+    <Content Include="Images\weather\simple01\125x105\cond050.png" />
+    <Content Include="Images\weather\simple01\125x105\cond051.png" />
+    <Content Include="Images\weather\simple01\125x105\cond052.png" />
+    <Content Include="Images\weather\simple01\125x105\cond053.png" />
+    <Content Include="Images\weather\simple01\125x105\cond056.png" />
+    <Content Include="Images\weather\simple01\125x105\cond058.png" />
+    <Content Include="Images\weather\simple01\125x105\cond062.png" />
+    <Content Include="Images\weather\simple01\125x105\cond064.png" />
+    <Content Include="Images\weather\simple01\125x105\cond065.png" />
+    <Content Include="Images\weather\simple01\125x105\cond069.png" />
+    <Content Include="Images\weather\simple01\125x105\cond075.png" />
+    <Content Include="Images\weather\simple01\125x105\cond076.png" />
+    <Content Include="Images\weather\simple01\125x105\cond077.png" />
+    <Content Include="Images\weather\simple01\205x172\cond000.png" />
+    <Content Include="Images\weather\simple01\205x172\cond001.png" />
+    <Content Include="Images\weather\simple01\205x172\cond002.png" />
+    <Content Include="Images\weather\simple01\205x172\cond004.png" />
+    <Content Include="Images\weather\simple01\205x172\cond005.png" />
+    <Content Include="Images\weather\simple01\205x172\cond006.png" />
+    <Content Include="Images\weather\simple01\205x172\cond008.png" />
+    <Content Include="Images\weather\simple01\205x172\cond009.png" />
+    <Content Include="Images\weather\simple01\205x172\cond010.png" />
+    <Content Include="Images\weather\simple01\205x172\cond017.png" />
+    <Content Include="Images\weather\simple01\205x172\cond023.png" />
+    <Content Include="Images\weather\simple01\205x172\cond025.png" />
+    <Content Include="Images\weather\simple01\205x172\cond033.png" />
+    <Content Include="Images\weather\simple01\205x172\cond034.png" />
+    <Content Include="Images\weather\simple01\205x172\cond040.png" />
+    <Content Include="Images\weather\simple01\205x172\cond041.png" />
+    <Content Include="Images\weather\simple01\205x172\cond045.png" />
+    <Content Include="Images\weather\simple01\205x172\cond050.png" />
+    <Content Include="Images\weather\simple01\205x172\cond051.png" />
+    <Content Include="Images\weather\simple01\205x172\cond052.png" />
+    <Content Include="Images\weather\simple01\205x172\cond053.png" />
+    <Content Include="Images\weather\simple01\205x172\cond056.png" />
+    <Content Include="Images\weather\simple01\205x172\cond058.png" />
+    <Content Include="Images\weather\simple01\205x172\cond062.png" />
+    <Content Include="Images\weather\simple01\205x172\cond064.png" />
+    <Content Include="Images\weather\simple01\205x172\cond065.png" />
+    <Content Include="Images\weather\simple01\205x172\cond069.png" />
+    <Content Include="Images\weather\simple01\205x172\cond075.png" />
+    <Content Include="Images\weather\simple01\205x172\cond076.png" />
+    <Content Include="Images\weather\simple01\205x172\cond077.png" />
+    <Content Include="Images\weather\simple01\80x67\cond000.png" />
+    <Content Include="Images\weather\simple01\80x67\cond001.png" />
+    <Content Include="Images\weather\simple01\80x67\cond002.png" />
+    <Content Include="Images\weather\simple01\80x67\cond004.png" />
+    <Content Include="Images\weather\simple01\80x67\cond005.png" />
+    <Content Include="Images\weather\simple01\80x67\cond006.png" />
+    <Content Include="Images\weather\simple01\80x67\cond008.png" />
+    <Content Include="Images\weather\simple01\80x67\cond009.png" />
+    <Content Include="Images\weather\simple01\80x67\cond010.png" />
+    <Content Include="Images\weather\simple01\80x67\cond017.png" />
+    <Content Include="Images\weather\simple01\80x67\cond023.png" />
+    <Content Include="Images\weather\simple01\80x67\cond025.png" />
+    <Content Include="Images\weather\simple01\80x67\cond033.png" />
+    <Content Include="Images\weather\simple01\80x67\cond034.png" />
+    <Content Include="Images\weather\simple01\80x67\cond040.png" />
+    <Content Include="Images\weather\simple01\80x67\cond041.png" />
+    <Content Include="Images\weather\simple01\80x67\cond045.png" />
+    <Content Include="Images\weather\simple01\80x67\cond050.png" />
+    <Content Include="Images\weather\simple01\80x67\cond051.png" />
+    <Content Include="Images\weather\simple01\80x67\cond052.png" />
+    <Content Include="Images\weather\simple01\80x67\cond053.png" />
+    <Content Include="Images\weather\simple01\80x67\cond056.png" />
+    <Content Include="Images\weather\simple01\80x67\cond058.png" />
+    <Content Include="Images\weather\simple01\80x67\cond062.png" />
+    <Content Include="Images\weather\simple01\80x67\cond064.png" />
+    <Content Include="Images\weather\simple01\80x67\cond065.png" />
+    <Content Include="Images\weather\simple01\80x67\cond069.png" />
+    <Content Include="Images\weather\simple01\80x67\cond075.png" />
+    <Content Include="Images\weather\simple01\80x67\cond076.png" />
+    <Content Include="Images\weather\simple01\80x67\cond077.png" />
+    <Content Include="Privacy-policy\advertising.html" />
+    <Content Include="Privacy-policy\analytics.html" />
+    <Content Include="Privacy-policy\control.html" />
+    <Content Include="Privacy-policy\css\bootstrap-responsive.css" />
+    <Content Include="Privacy-policy\css\bootstrap-responsive.min.css" />
+    <Content Include="Privacy-policy\css\bootstrap.css" />
+    <Content Include="Privacy-policy\css\bootstrap.min.css" />
+    <Content Include="Privacy-policy\css\main.css" />
+    <Content Include="Privacy-policy\data-collection.html" />
+    <Content Include="Privacy-policy\direct-marketing.html" />
+    <Content Include="Privacy-policy\img\arrow-back.png" />
+    <Content Include="Privacy-policy\img\arrow-down.png" />
+    <Content Include="Privacy-policy\img\arrow-right.png" />
+    <Content Include="Privacy-policy\img\arrow-up.png" />
+    <Content Include="Privacy-policy\img\contacts-off.png" />
+    <Content Include="Privacy-policy\img\contacts-on.png" />
+    <Content Include="Privacy-policy\img\cross.png" />
+    <Content Include="Privacy-policy\img\email-off.jpg" />
+    <Content Include="Privacy-policy\img\email-on.jpg" />
+    <Content Include="Privacy-policy\img\glyphicons-halflings-white.png" />
+    <Content Include="Privacy-policy\img\glyphicons-halflings.png" />
+    <Content Include="Privacy-policy\img\likes-off.png" />
+    <Content Include="Privacy-policy\img\likes-on.png" />
+    <Content Include="Privacy-policy\img\location-off.png" />
+    <Content Include="Privacy-policy\img\location-on.png" />
+    <Content Include="Privacy-policy\img\message-off.jpg" />
+    <Content Include="Privacy-policy\img\message-on.jpg" />
+    <Content Include="Privacy-policy\img\other-off.png" />
+    <Content Include="Privacy-policy\img\other-on.png" />
+    <Content Include="Privacy-policy\img\phone-off.jpg" />
+    <Content Include="Privacy-policy\img\phone-on.jpg" />
+    <Content Include="Privacy-policy\img\photos-off.png" />
+    <Content Include="Privacy-policy\img\photos-on.png" />
+    <Content Include="Privacy-policy\img\sms-off.jpg" />
+    <Content Include="Privacy-policy\img\sms-on.jpg" />
+    <Content Include="Privacy-policy\img\tick-off.png" />
+    <Content Include="Privacy-policy\img\tick-on.png" />
+    <Content Include="Privacy-policy\img\tick.png" />
+    <Content Include="Privacy-policy\index.html" />
+    <Content Include="Privacy-policy\js\bootstrap.js" />
+    <Content Include="Privacy-policy\js\bootstrap.min.js" />
+    <Content Include="Privacy-policy\js\jquery.min.js" />
+    <Content Include="Privacy-policy\js\main.js" />
+    <Content Include="Privacy-policy\location-services.html" />
+    <Content Include="Privacy-policy\payments.html" />
+    <Content Include="Privacy-policy\security.html" />
+    <Content Include="Privacy-policy\social-networking.html" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZLib.Phone">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ICSharpCode.SharpZLib.Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Controls">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Filtering">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Filtering.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Bmp">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Bmp.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Gif">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Gif.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Png">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Png.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Utils">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WpToolkit\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="PhoneCodeContractsAssemblies">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\PhoneCodeContractsAssemblies.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="WriteableBitmapExWinPhone">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.8.0\lib\WindowsPhone8\WriteableBitmapExWinPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="WriteableBitmapExWinPhoneXnaDependant">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.8.0\lib\WindowsPhone8\WriteableBitmapExWinPhoneXnaDependant.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChameleonScheduledTaskAgent\ChameleonScheduledTaskAgent.csproj">
+      <Project>{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}</Project>
+      <Name>ChameleonScheduledTaskAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WowStuffLib\ChameleonLib.csproj">
+      <Project>{78F76B23-4114-413B-87E6-B860479EEF26}</Project>
+      <Name>ChameleonLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!--
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.8\tools\Microsoft.Bcl.Build.targets" />
+  -->
+</Project>

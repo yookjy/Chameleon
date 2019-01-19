@@ -1,0 +1,154 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Chameleon.View.SettingImagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:SwivelTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:SwivelTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Name="PickerItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Name}" Margin="0"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Name="PickerFullModeItemTemplate">
+            <StackPanel Orientation="Horizontal" Margin="0 20 0 17">
+                <TextBlock Text="{Binding Name}" Margin="0" 
+                           FontSize="{StaticResource JumpListAlphabetSmallFontSize}" 
+                           FontFamily="{StaticResource PhoneFontFamilyLight}" 
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot는 모든 페이지 내용이 배치되는 루트 표입니다.-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel에는 응용 프로그램 이름 및 페이지 제목이 포함됩니다.-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding LocalizedResources.ImageSettings, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - 여기에 추가 내용을 배치합니다.-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="12,0,0,0">
+                <StackPanel>
+                    <StackPanel Margin="12,0,12,0">
+                        <TextBlock Text="{Binding LocalizedResources.SettingGroupBingCommon, Source={StaticResource LocalizedStrings}}" 
+                                       Margin="-12, 0, 0, 12" FontSize="{StaticResource JumpListStringFontSize}" />
+                        <toolkit:ListPicker x:Name="LanguageMarketPicker" CacheMode="BitmapCache"
+                                         Header="{Binding LocalizedResources.SearchLanguageMarketplace, Source={StaticResource LocalizedStrings}}" 
+                                         FullModeHeader="{Binding LocalizedResources.SearchLanguageMarketplace, Source={StaticResource LocalizedStrings}}" 
+                                         ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                         FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                        <toolkit:ListPicker x:Name="BingSearchAspectPicker" CacheMode="BitmapCache" 
+                                         Header="{Binding LocalizedResources.BingSearchAspect, Source={StaticResource LocalizedStrings}}" 
+                                         FullModeHeader="{Binding LocalizedResources.BingSearchAspect, Source={StaticResource LocalizedStrings}}" 
+                                         ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                         FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                    </StackPanel>
+                    <StackPanel Margin="12,12,12,0">
+                        <TextBlock Text="{Binding LocalizedResources.SettingGroupBingSearch, Source={StaticResource LocalizedStrings}}" 
+                                       Margin="-12, 0, 0, 12" FontSize="{StaticResource JumpListStringFontSize}" />
+                        <toolkit:ListPicker x:Name="BingSearchOptionsPicker" CacheMode="BitmapCache"
+                                     Header="{Binding LocalizedResources.BingSearchOptions, Source={StaticResource LocalizedStrings}}" 
+                                     FullModeHeader="{Binding LocalizedResources.BingSearchOptions, Source={StaticResource LocalizedStrings}}" 
+                                     ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                     FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                        <toolkit:ListPicker x:Name="BingSearchSizePicker" CacheMode="BitmapCache"
+                                     Header="{Binding LocalizedResources.BingSearchSize, Source={StaticResource LocalizedStrings}}" 
+                                     FullModeHeader="{Binding LocalizedResources.BingSearchSize, Source={StaticResource LocalizedStrings}}" 
+                                     ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                     FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                        <Grid x:Name="BingSearchCustomSize" Margin="12,0" Visibility="Collapsed">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding LocalizedResources.Width, Source={StaticResource LocalizedStrings}}" 
+                                           Foreground="{StaticResource PhoneSubtleBrush}" VerticalAlignment="Center"></TextBlock>
+                            <TextBox x:Name="BingSearchSizeWidth" Grid.Column="1" MaxLength="4" Margin="6,0" InputScope="Number" />
+                            <TextBlock Grid.Column="2" Text="{Binding LocalizedResources.Height, Source={StaticResource LocalizedStrings}}" 
+                                           Foreground="{StaticResource PhoneSubtleBrush}" VerticalAlignment="Center"></TextBlock>
+                            <TextBox x:Name="BingSearchSizeHeight" Grid.Column="3" MaxLength="4" Margin="6,0" InputScope="Number" />
+                        </Grid>
+                        <toolkit:ListPicker x:Name="BingSearchColorPicker" CacheMode="BitmapCache"
+                                     Header="{Binding LocalizedResources.BingSearchColor, Source={StaticResource LocalizedStrings}}" 
+                                     FullModeHeader="{Binding LocalizedResources.BingSearchColor, Source={StaticResource LocalizedStrings}}" 
+                                     ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                     FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                        <toolkit:ListPicker x:Name="BingSearchStylePicker" CacheMode="BitmapCache"
+                                     Header="{Binding LocalizedResources.BingSearchStyle, Source={StaticResource LocalizedStrings}}" 
+                                     FullModeHeader="{Binding LocalizedResources.BingSearchStyle, Source={StaticResource LocalizedStrings}}" 
+                                     ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                     FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                        <toolkit:ListPicker x:Name="BingSearchFacePicker" CacheMode="BitmapCache"
+                                     Header="{Binding LocalizedResources.BingSearchFace, Source={StaticResource LocalizedStrings}}" 
+                                     FullModeHeader="{Binding LocalizedResources.BingSearchFace, Source={StaticResource LocalizedStrings}}" 
+                                     ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                     FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                        <toolkit:ListPicker x:Name="BingSearchQueryCountPicker" CacheMode="BitmapCache"
+                                     Header="{Binding LocalizedResources.BingSearchQueryCount, Source={StaticResource LocalizedStrings}}" 
+                                     FullModeHeader="{Binding LocalizedResources.BingSearchQueryCount, Source={StaticResource LocalizedStrings}}" 
+                                     ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                     FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" />
+                        <toolkit:ListPicker x:Name="BingSearchAdultPicker" CacheMode="BitmapCache"
+                                     Header="{Binding LocalizedResources.BingSearchAdult, Source={StaticResource LocalizedStrings}}" 
+                                     FullModeHeader="{Binding LocalizedResources.BingSearchAdult, Source={StaticResource LocalizedStrings}}" 
+                                     ItemTemplate="{StaticResource PickerItemTemplate}" 
+                                     FullModeItemTemplate="{StaticResource PickerFullModeItemTemplate}" 
+                                     Visibility="Collapsed" />
+                        <TextBlock x:Name="DomainFilter" Text="" Foreground="{StaticResource PhoneSubtleBrush}" Margin="12,12,12,0" />
+                        <Grid Margin="0,-6,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Button Content="{Binding LocalizedResources.Edit, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Tap="OnTapDomainFilter" />
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

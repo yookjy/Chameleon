@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78F76B23-4114-413B-87E6-B860479EEF26}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChameleonLib</RootNamespace>
+    <AssemblyName>ChameleonLib</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SupportedCultures>
+    </SupportedCultures>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Api\Calendar\Model\Day.cs" />
+    <Compile Include="Api\Calendar\Model\Month.cs" />
+    <Compile Include="Api\Calendar\Model\Week.cs" />
+    <Compile Include="Api\Calendar\VsCalendar.cs" />
+    <Compile Include="Api\Open\Bing\BingMarkets.cs" />
+    <Compile Include="Api\Open\Bing\BingSearchContainer.cs" />
+    <Compile Include="Api\Open\Today\BingToday.cs" />
+    <Compile Include="Api\Open\Bing\Finder.cs" />
+    <Compile Include="Api\Open\Today\NasaToday.cs" />
+    <Compile Include="Api\Open\Today\TodayImageResult.cs" />
+    <Compile Include="Api\Open\Weather\Model\DispalyUnit.cs" />
+    <Compile Include="Api\Open\Weather\Model\Forecast.cs" />
+    <Compile Include="Api\Open\Weather\Model\Forecasts.cs" />
+    <Compile Include="Api\Open\Weather\Model\LiveWeather.cs" />
+    <Compile Include="Api\Open\Weather\Model\Location.cs" />
+    <Compile Include="Api\Open\Weather\Model\Station.cs" />
+    <Compile Include="Api\Open\Weather\Model\ValueInfo.cs" />
+    <Compile Include="Api\Open\Weather\Model\ValueUnits.cs" />
+    <Compile Include="Api\Open\Weather\Model\WeatherCity.cs" />
+    <Compile Include="Api\Open\Weather\Model\WeatherDateTime.cs" />
+    <Compile Include="Api\Open\Weather\Model\WeatherIconMap.cs" />
+    <Compile Include="Api\Open\Weather\Model\WeatherUnit.cs" />
+    <Compile Include="Api\Open\Weather\WeatherBug.cs" />
+    <Compile Include="Converter\AppointmentIconConverter.cs" />
+    <Compile Include="Converter\AttendeesConverter.cs" />
+    <Compile Include="Converter\ChangeSignConverter.cs" />
+    <Compile Include="Converter\ColorToBrushConverter.cs" />
+    <Compile Include="Converter\ConcatConverter.cs" />
+    <Compile Include="Converter\DayNameConverter.cs" />
+    <Compile Include="Converter\FloatSplitConverter.cs" />
+    <Compile Include="Converter\Formatter.cs" />
+    <Compile Include="Converter\ResourceDateFormatter.cs" />
+    <Compile Include="Converter\ThemePathConverter.cs" />
+    <Compile Include="Converter\VisibilityConverter.cs" />
+    <Compile Include="Converter\WeatherImageIconConverter.cs" />
+    <Compile Include="Converter\WeatherRangeConverter.cs" />
+    <Compile Include="Converter\WeatherUnitsConverter.cs" />
+    <Compile Include="Helper\BatteryHelper.cs" />
+    <Compile Include="Helper\DeviceHelper.cs" />
+    <Compile Include="Helper\DomainHelper.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Helper\JpegHelper.cs" />
+    <Compile Include="Helper\LivetileHelper.cs" />
+    <Compile Include="Helper\LockscreenHelper.cs" />
+    <Compile Include="Helper\PathHelper.cs" />
+    <Compile Include="Helper\ResolutionHelper.cs" />
+    <Compile Include="Helper\SettingHelper.cs" />
+    <Compile Include="Helper\WwwHelper.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="Model\About.cs" />
+    <Compile Include="Model\AbstractPicture.cs" />
+    <Compile Include="Model\App.cs" />
+    <Compile Include="Model\AppGroup.cs" />
+    <Compile Include="Model\BlackDomain.cs" />
+    <Compile Include="Model\BlackList.cs" />
+    <Compile Include="Model\ChameleonAlbum.cs" />
+    <Compile Include="Model\ColorItem.cs" />
+    <Compile Include="Model\DownloadItem.cs" />
+    <Compile Include="Model\DownloadStatus.cs" />
+    <Compile Include="Model\IconPickerItem.cs" />
+    <Compile Include="Model\LiveData.cs" />
+    <Compile Include="Model\LivetileTemplateItem.cs" />
+    <Compile Include="Model\LockscreenData.cs" />
+    <Compile Include="Model\LockscreenTemplateItem.cs" />
+    <Compile Include="Model\AppListModel.cs" />
+    <Compile Include="Model\PhonePicture.cs" />
+    <Compile Include="Model\PickerItem.cs" />
+    <Compile Include="Model\ScheduleSettings.cs" />
+    <Compile Include="Model\SourceOrigin.cs" />
+    <Compile Include="Model\VersionContent.cs" />
+    <Compile Include="Model\WebPicture.cs" />
+    <Compile Include="Model\LivetileData.cs" />
+    <Compile Include="Model\Version.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Constants.cs" />
+    <Compile Include="Storages\MutexedIsoStorageFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZLib.Phone">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ICSharpCode.SharpZLib.Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Controls">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Filtering">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Filtering.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Bmp">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Bmp.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Gif">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Gif.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.IO.Png">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.IO.Png.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageTools.Utils">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\ImageTools.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm.WP71">
+      <HintPath>..\packages\Microsoft.Data.OData.WindowsPhone.5.0.0.0\lib\windowsphone80\Microsoft.Data.Edm.WP71.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData.WP71">
+      <HintPath>..\packages\Microsoft.Data.OData.WindowsPhone.5.0.0.0\lib\windowsphone80\Microsoft.Data.OData.WP71.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client.WP80">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.WindowsPhone.5.0.0.0\lib\windowsphone80\Microsoft.Data.Services.Client.WP80.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WpToolkit\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PhoneCodeContractsAssemblies">
+      <HintPath>..\packages\ImageTools.0.3.1\lib\sl3-wp\PhoneCodeContractsAssemblies.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib.WindowsPhone7">
+      <HintPath>..\packages\SharpZipLib-WP7.0.86.0.518\lib\sl4-windowsphone71\SharpZipLib.WindowsPhone7.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial.WP71">
+      <HintPath>..\packages\Microsoft.Data.OData.WindowsPhone.5.0.0.0\lib\windowsphone80\System.Spatial.WP71.dll</HintPath>
+    </Reference>
+    <Reference Include="WriteableBitmapExWinPhone">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.8.0\lib\WindowsPhone8\WriteableBitmapExWinPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="WriteableBitmapExWinPhoneXnaDependant">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.8.0\lib\WindowsPhone8\WriteableBitmapExWinPhoneXnaDependant.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.ko.resx" />
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\htc\attentive.phone.png" />
+    <Resource Include="Images\sysapp\htc\beats.audio.png" />
+    <Resource Include="Images\sysapp\htc\connection.setup.png" />
+    <Resource Include="Images\sysapp\htc\converter.png" />
+    <Resource Include="Images\sysapp\htc\flash.light.png" />
+    <Resource Include="Images\sysapp\htc\htc.png" />
+    <Resource Include="Images\sysapp\htc\make.more.space.png" />
+    <Resource Include="Images\sysapp\htc\photo.enhancer.png" />
+    <Resource Include="Images\sysapp\nokia\account.png" />
+    <Resource Include="Images\sysapp\nokia\app.social.png" />
+    <Resource Include="Images\sysapp\nokia\creative.studio.png" />
+    <Resource Include="Images\sysapp\nokia\here.city.lens.png" />
+    <Resource Include="Images\sysapp\nokia\here.drive.plus.png" />
+    <Resource Include="Images\sysapp\nokia\here.maps.png" />
+    <Resource Include="Images\sysapp\nokia\here.transit.png" />
+    <Resource Include="Images\sysapp\nokia\my.nokia.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.care.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.glam.me.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.pro.cam.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.refocus.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.smart.cam.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.trailers.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.video.trimmer.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.video.upload.png" />
+    <Resource Include="Images\sysapp\nokia\nokia.xpress.png" />
+    <Resource Include="Images\sysapp\nokia\panorama.png" />
+    <Resource Include="Images\sysapp\nokia\photo.beamer.png" />
+    <Resource Include="Images\sysapp\nokia\play.to.png" />
+    <Resource Include="Images\sysapp\nokia\ringtone.maker.png" />
+    <Resource Include="Images\sysapp\nokia\settings.png" />
+    <Resource Include="Images\sysapp\nokia\smart.shoot.png" />
+    <Resource Include="Images\sysapp\nokia\sophie.lens.for.nokia.png" />
+    <Resource Include="Images\sysapp\nokia\transfer.my.data.png" />
+    <Resource Include="Images\sysapp\samsung\app.folder.png" />
+    <Resource Include="Images\sysapp\samsung\ativ.beam.png" />
+    <Resource Include="Images\sysapp\samsung\beauty.png" />
+    <Resource Include="Images\sysapp\samsung\chat.on.png" />
+    <Resource Include="Images\sysapp\samsung\live.wallpaper.png" />
+    <Resource Include="Images\sysapp\samsung\mini.diary.png" />
+    <Resource Include="Images\sysapp\samsung\music.hub.png" />
+    <Resource Include="Images\sysapp\samsung\now.png" />
+    <Resource Include="Images\sysapp\samsung\photo.editor.png" />
+    <Resource Include="Images\sysapp\samsung\photogram.png" />
+    <Resource Include="Images\sysapp\samsung\rss.times.png" />
+    <Resource Include="Images\sysapp\samsung\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\sysapp\huawei\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\nokia\nokia.music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\samsung\family.story.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\microsoft\bing.finance.png" />
+    <Resource Include="Images\sysapp\microsoft\bing.news.png" />
+    <Resource Include="Images\sysapp\microsoft\bing.sports.png" />
+    <Resource Include="Images\sysapp\microsoft\bing.weather.png" />
+    <Resource Include="Images\sysapp\microsoft\facebook.png" />
+    <Resource Include="Images\sysapp\microsoft\fresh.paint.png" />
+    <Resource Include="Images\sysapp\microsoft\groupme.png" />
+    <Resource Include="Images\sysapp\microsoft\pdf.reader.png" />
+    <Resource Include="Images\sysapp\microsoft\photosynth.png" />
+    <Resource Include="Images\sysapp\microsoft\skydrive.png" />
+    <Resource Include="Images\sysapp\microsoft\skype.png" />
+    <Resource Include="Images\sysapp\microsoft\translator.png" />
+    <Resource Include="Images\sysapp\microsoft\weather.png" />
+    <Resource Include="Images\sysapp\microsoft\xbox.360.smartglass.png" />
+    <Resource Include="Images\sysapp\microsoft\xbox.extras.png" />
+    <Resource Include="Images\sysapp\microsoft\xbox.music.png" />
+    <Resource Include="Images\sysapp\microsoft\xbox.one.smartglass.png" />
+    <Resource Include="Images\sysapp\microsoft\xbox.video.png" />
+    <Resource Include="Images\sysapp\microsoft\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\nokia\nokia.nfc.writer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\microsoft\alphajax.png" />
+    <Resource Include="Images\sysapp\microsoft\breeze.png" />
+    <Resource Include="Images\sysapp\microsoft\flowerz.png" />
+    <Resource Include="Images\sysapp\microsoft\halo.lite.png" />
+    <Resource Include="Images\sysapp\microsoft\minesweeper.png" />
+    <Resource Include="Images\sysapp\microsoft\sudoku.png" />
+    <Resource Include="Images\sysapp\microsoft\wordament.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\velostep\chameleon.png" />
+    <Resource Include="Images\sysapp\velostep\manufacturer.apps.png" />
+    <Resource Include="Images\sysapp\velostep\wowpad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\microsoft\academic.search.png" />
+    <Resource Include="Images\sysapp\microsoft\blink.png" />
+    <Resource Include="Images\sysapp\microsoft\face.mask.png" />
+    <Resource Include="Images\sysapp\microsoft\face.swap.png" />
+    <Resource Include="Images\sysapp\microsoft\face.touch.png" />
+    <Resource Include="Images\sysapp\microsoft\network.speed.test.png" />
+    <Resource Include="Images\sysapp\microsoft\office.remote.png" />
+    <Resource Include="Images\sysapp\microsoft\socl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\microsoft\level.png" />
+    <Resource Include="Images\sysapp\microsoft\unit.converter.png" />
+    <Resource Include="Images\sysapp\microsoft\yammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\velostep\wowpad.amk.png" />
+    <Resource Include="Images\sysapp\velostep\wowpad.atk.png" />
+    <Resource Include="Images\sysapp\velostep\wowpad.mk.png" />
+    <Resource Include="Images\sysapp\velostep\wowpad.tk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\nokia\app.folder.png" />
+    <Resource Include="Images\sysapp\nokia\call.sms.filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\microsoft\bing.food.drink.png" />
+    <Resource Include="Images\sysapp\microsoft\bing.health.fitness.png" />
+    <Resource Include="Images\sysapp\microsoft\bing.travel.png" />
+    <Resource Include="Images\sysapp\velostep\ccplayer.free.png" />
+    <Resource Include="Images\sysapp\velostep\ccplayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sysapp\samsung\story.album.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,744 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Chameleon.MainPage"
+    x:Name="mainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:converter="clr-namespace:ChameleonLib.Converter;assembly=ChameleonLib"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    toolkit:TiltEffect.IsTiltEnabled="True"
+    shell:SystemTray.IsVisible="False">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:SwivelTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:SwivelTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <phone:PhoneApplicationPage.Resources>
+        <converter:AppointmentIconConverter x:Key="AppointmentIconConverter" />
+        <converter:WeatherImageIconConverter x:Key="WeatherIconConverter" />
+        <converter:WeatherUnitsConverter x:Key="WeatherUnitsConverter" />
+        <converter:DayNameConverter x:Key="DayNameConverter" />
+        <converter:WeatherRangeConverter x:Key="WeatherRangeConverter" />
+        <converter:ThemePathConverter x:Key="ThemePathConverter" />
+        <converter:VisibilityConverter x:Key="VisibilityConverter" />
+        <converter:AttendeesConverter x:Key="AttendeesConverter" />
+        <converter:ResourceDateFormatter x:Key="ResourceDateFormatter" />
+        <converter:ChangeSignConverter x:Key="ChangeSignConverter" />
+
+        <!-- 락스크린 메인 템플렛 -->
+        <DataTemplate x:Key="LockscreenPictureItemTemplate">
+            <Grid Tap="LockscreenImage_Tap" Hold="Grid_Hold">
+                <Grid Margin="3,3,0,0" Background="Black" Opacity="0.2" />
+                <Border BorderThickness="0" BorderBrush="#FFC8C8C8" Margin="0,0,3,3">
+                    <Grid>
+                        <Grid Margin="{Binding Margin}" >
+                            <Image Source="{Binding ThumbnailImageSource}" 
+                                   Opacity="{Binding Opacity}"
+                                   Stretch="Fill" />
+                            <Image Source="{Binding Warnning}" Width="36"
+                                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </Grid>
+                        <Image Source="{Binding CurrentLockscreen}" Stretch="Fill"/>
+                    </Grid>
+                </Border>
+                <toolkit:ContextMenuService.ContextMenu>
+                    <toolkit:ContextMenu IsZoomEnabled="False" Opened="OnOpendLockscreenContext" Unloaded="OnUnloadLockscreenContextMenu"  >
+                        <toolkit:MenuItem Header="{Binding Path=LocalizedResources.LockscreenEditPreview, Source={StaticResource LocalizedStrings}}" 
+                                          Click="OnLockscreenPreviewTap" />
+                        <toolkit:MenuItem Header="{Binding Path=LocalizedResources.AppbarMenuSetLockscreen, Source={StaticResource LocalizedStrings}}" 
+                                          Click="OnSetLockscreenImage" />
+                        <toolkit:MenuItem Header="{Binding Path=LocalizedResources.AppbarMenuRemove, Source={StaticResource LocalizedStrings}}" 
+                                          x:Name="RemoveMenu"
+                                          Click="OnRemoveLockscreenImage"/>
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+            </Grid>
+        </DataTemplate>
+        <!-- 날씨 텔플렛-->
+        <DataTemplate x:Key="WeatherForecastItemTemplate">
+            <StackPanel Width="110" >
+                <TextBlock Text="{Binding AltTitle, Converter={StaticResource DayNameConverter}}" HorizontalAlignment="Center" />
+                <Image HorizontalAlignment="Center" Width="100" Source="{Binding ImageIcon, Converter={StaticResource WeatherIconConverter}, ConverterParameter=125x105}" />
+                <Grid HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.ColumnSpan="2" Text="{Binding LowHigh, Converter={StaticResource WeatherRangeConverter}}" HorizontalAlignment="Center" />
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+        <!-- 날씨 텔플렛 (야간)-->
+        <DataTemplate x:Key="WeatherForecastNightItemTemplate">
+            <StackPanel Width="110" >
+                <TextBlock Text="{Binding AltTitle, Converter={StaticResource DayNameConverter}}" HorizontalAlignment="Center" />
+                <Image HorizontalAlignment="Center" Width="100" Source="{Binding ImageIconForNight, Converter={StaticResource WeatherIconConverter}, ConverterParameter=125x105}" />
+                <Grid HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.ColumnSpan="2" Text="{Binding LowHigh, Converter={StaticResource WeatherRangeConverter}}" HorizontalAlignment="Center" />
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+        <!-- 달력 템플렛 -->
+        <DataTemplate x:Key="CalendarItemTemplate">
+            <Grid Margin="8, 0"  Width="44" Height="40">
+                <Ellipse Margin="0,4,0,0" Fill="{Binding BackgroundBrush}" 
+                         Width="35" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center">
+                </Ellipse>
+                <TextBlock Text="{Binding AppointmentList.Count}" 
+                           FontSize="10" FontWeight="ExtraBold" 
+                           Foreground="{Binding ForegroundBrush}"
+                           Margin="0,-2,0,0" Padding="0"
+                           HorizontalAlignment="Right" VerticalAlignment="Top" />
+                <TextBlock Text="{Binding DayName}"
+                            Margin="0,0,0,0" Padding="0"
+                            FontSize="{Binding FontSize}" FontWeight="{Binding FontWeight}" Foreground="{Binding ForegroundBrush}"
+                            HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                </TextBlock>
+            </Grid>
+        </DataTemplate>
+        <!--
+            Account.Kind : Other, Fachebook, Outlook, Phone, WindowsLive
+            Account.Name
+            Details(상세), Subject(제목)
+            StartTime, EndTime
+            IsAllDayEvent, IsPrivate
+            Location
+            Organizer (주선자), Attendee (복수 : 참석자들)
+            Status : Busy, Free, OutOfOffice, Tentative
+        -->
+        <!-- 달력 약속 템플렛 -->
+        <DataTemplate x:Key="CalendarAppointmentItemTemplate">
+            <Grid Margin="12, 3, 6, 3" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding StartTime, StringFormat='{}{0:HH:mm}'}" 
+                               Visibility="{Binding IsAllDayEvent, Converter={StaticResource VisibilityConverter}, ConverterParameter=Reverse}"
+                               FontSize="{StaticResource PhoneFontSizeSmall}" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" />
+                    <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding EndTime, StringFormat='{} ~ {0:HH:mm}'}" 
+                               Visibility="{Binding IsAllDayEvent, Converter={StaticResource VisibilityConverter}, ConverterParameter=Reverse}"
+                               FontSize="{StaticResource PhoneFontSizeSmall}" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" />
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{Binding Organizer.DisplayName}" 
+                           FontSize="{StaticResource PhoneFontSizeSmall}" />
+                    <TextBlock Grid.Column="1" Text="{Binding Attendees, Converter={StaticResource AttendeesConverter}}" 
+                           FontSize="{StaticResource PhoneFontSizeSmall}" />
+                    <TextBlock Grid.Column="2" Text="{Binding Location, StringFormat='({0})'}" 
+                           FontSize="{StaticResource PhoneFontSizeSmall}" Margin="10,0,0,0" />
+                </Grid>
+                <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Margin="0,0,0,0" HorizontalAlignment="Left">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Margin="5" Width="32" Height="32"
+                           Source="{Binding Account, Converter={StaticResource AppointmentIconConverter}}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Subject}" Margin="5,0,0,0"
+                               FontSize="{StaticResource PhoneFontSizeMediumLarge}" 
+                               VerticalAlignment="Center" HorizontalAlignment="Left" />
+                    </Grid>
+                    <TextBlock Text="{Binding Details}" 
+                               TextWrapping="Wrap" Margin="10,0,0,0"
+                               FontSize="{StaticResource PhoneFontSizeNormal}"
+                               Visibility="{Binding Details, Converter={StaticResource VisibilityConverter}, ConverterParameter=Null}" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <!-- 제조사앱 리스트 헤더 템플렛 -->
+        <DataTemplate x:Key="ManufacturerAppsListHeaderTemplate">
+            <Grid Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding MFAppsTitle, ElementName=mainPage}"
+                                           Style="{StaticResource PanoramaItemHeaderTextStyle}"
+                                           Grid.Row="0"/>
+            </Grid>
+        </DataTemplate>
+        <!-- 제조사앱 그룹헤더 템플렛 -->
+        <DataTemplate x:Key="ManufacturerAppsGroupHeaderTemplate">
+            <TextBlock Text="{Binding Name}" FontSize="42" FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                                           Margin="12,-6,0,12" />
+        </DataTemplate>
+        <!-- 제조사앱 아이템 템플렛-->
+        <DataTemplate x:Key="ManufacturerAppsItemTemplate">
+            <StackPanel Orientation="Horizontal" Margin="12,2,0,2" Height="72" Width="432">
+                <Image Source="{Binding ImageUri}" Width="64" Height="64" />
+                <StackPanel Width="320" Margin="8,0,0,0" VerticalAlignment="Center" >
+                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                    <TextBlock Text="{Binding AppId}" Visibility="Collapsed" />
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="PanoramaTitleTemplate">
+            <Grid>
+                <TextBlock Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+                           Tap="OnTapPanoramaTitle" FontSize="120" />
+            </Grid>
+        </DataTemplate>
+        <!-- 라이브 타일 템플렛-->
+        <DataTemplate x:Key="LivetileItemTemplate">
+            <Grid Margin="0,0,0,8" Visibility="{Binding Visibility}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding Title}" 
+                           FontSize="{StaticResource PhoneFontSizeSmall}" 
+                           FontWeight="SemiBold" FontStretch="Condensed" 
+                           HorizontalAlignment="Center"
+                           Tap="LivetilePin_Tap" />
+                <TextBlock Text="{Binding Subtitle}" 
+                           Margin="0,23,0,0"
+                           FontSize="16" 
+                           FontStretch="Condensed" 
+                           HorizontalAlignment="Center"
+                           Visibility="{Binding Subtitle, Converter={StaticResource VisibilityConverter}, ConverterParameter=Null}"
+                           Tap="LivetilePin_Tap" />
+                <Image Grid.Row="1" Width="76" Margin="-14,0"
+                       VerticalAlignment="Top" 
+                       Source="{Binding PinIconUri}" 
+                       Opacity="{Binding PinIconOpacity}" 
+                       Tap="LivetilePin_Tap" />
+                <Image Stretch="Uniform" Source="{Binding FrontSide}"  
+                       Grid.Column="1" Grid.RowSpan="2" 
+                       HorizontalAlignment="Left"
+                       Margin="8,0,0,0" 
+                       Width="150" Height="150"
+                       Tap="LivetileItem_Tap" />
+                <Grid Grid.Column="1" Grid.RowSpan="2" 
+                      Margin="166,0,0,0" 
+                      Width="150"  Height="150"
+                      HorizontalAlignment="Left"
+                      Tap="LivetileItem_Tap">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Stretch="UniformToFill" Source="{Binding BackSide}" 
+                           Margin="0,0,0,0" Grid.RowSpan="2" Width="150" Height="150"/>
+                    <TextBlock Grid.Row="0" Margin="6,6,0,0" 
+                               FontSize="{StaticResource PhoneFontSizeMedium}" 
+                               LineHeight="{StaticResource PhoneFontSizeMedium}"
+                               LineStackingStrategy="BlockLineHeight"
+                               Text="{Binding LiveBackTileContent}"
+                               TextWrapping="Wrap"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Foreground="White" />
+                    <TextBlock Grid.Row="2" Margin="6,0,0,6" 
+                               Text="{Binding BackTitle}"
+                               FontSize="14" VerticalAlignment="Bottom" Foreground="White" />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot는 모든 페이지 내용이 배치되는 루트 표입니다.-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Panorama 컨트롤-->
+        <phone:Panorama x:Name="PanoramaMainView" TitleTemplate="{StaticResource PanoramaTitleTemplate}" >
+            <!--
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="/Assets/PanoramaBackground.jpg" Stretch="UniformToFill" Opacity="1" />                
+            </phone:Panorama.Background>
+-->
+            <!--Panorama 항목 1-->
+            <phone:PanoramaItem x:Name="PILivetile" 
+                                Header="{Binding Path=LocalizedResources.Livetile, Source={StaticResource LocalizedStrings}}">
+                <phone:PanoramaItem.Resources>
+                    <Style x:Key="PanoramaItemStyle1" TargetType="phone:PanoramaItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="phone:PanoramaItem">
+                                    <Grid Background="{TemplateBinding Background}" Margin="12,0,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid x:Name="LivetileHeader"
+                                              MouseLeave="PIHeader_MouseLeave"
+                                              MouseLeftButtonDown="PIHeader_MouseDown"
+                                              Tap="PIHeader_Tap">
+                                            <Image x:Name="LivetileHeaderIcon"
+                                                   Width="46" Height="46" Stretch="Uniform" 
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top" 
+                                                   Loaded="Image_Loaded"
+                                                   Margin="0,22,0,0" />
+                                            <ContentControl x:Name="header" CharacterSpacing="-35" 
+                                                        ContentTemplate="{TemplateBinding HeaderTemplate}" 
+                                                        Content="{TemplateBinding Header}" 
+                                                        FontSize="66" FontFamily="{StaticResource PhoneFontFamilySemiLight}" 
+                                                        HorizontalAlignment="Left" Margin="64,-2,0,38"/>
+                                        </Grid>
+                                        <ContentPresenter Content="{TemplateBinding Content}" 
+                                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                          Margin="{TemplateBinding Padding}" Grid.Row="1" 
+                                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </phone:PanoramaItem.Resources>
+                <phone:PanoramaItem.Style>
+                    <StaticResource ResourceKey="PanoramaItemStyle1"/>
+                </phone:PanoramaItem.Style>
+                <Grid Margin="12,-20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Path=LocalizedResources.FrontSide, Source={StaticResource LocalizedStrings}}" 
+                               Grid.Column="0" FontSize="15" Margin="0,0,6,4"
+                               HorizontalAlignment="right" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="{Binding Path=LocalizedResources.RearSide, Source={StaticResource LocalizedStrings}}" 
+                               Grid.Column="1" FontSize="15" Margin="0,0,12,4"
+                               HorizontalAlignment="right" VerticalAlignment="Bottom"/>
+                    </Grid>
+                    <phone:LongListSelector x:Name="LivetileSelector"
+                                            Margin="0,0,0,0"
+                                            Grid.ColumnSpan="3" Grid.Row="1"
+                                            IsGroupingEnabled="False" HideEmptyGroups="True" 
+                                            ItemTemplate="{StaticResource LivetileItemTemplate}" 
+                                            >
+                    </phone:LongListSelector>
+                </Grid>
+            </phone:PanoramaItem>
+
+            <phone:PanoramaItem x:Name="PILockscreen" Tag="{Binding LockscreenCount, ElementName=mainPage}" Header="{Binding Path=LocalizedResources.Lockscreen, Source={StaticResource LocalizedStrings}}" >
+                <phone:PanoramaItem.Resources>
+                    <Style x:Key="PanoramaItemStyle1" TargetType="phone:PanoramaItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="phone:PanoramaItem">
+                                    <Grid Background="{TemplateBinding Background}" Margin="12,0,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid x:Name="LockscreenHeader"
+                                              MouseLeave="PIHeader_MouseLeave"
+                                              MouseLeftButtonDown="PIHeader_MouseDown"
+                                              Tap="PIHeader_Tap">
+                                            <ContentControl x:Name="header" CharacterSpacing="-35" ContentTemplate="{TemplateBinding HeaderTemplate}"  
+                                                        FontSize="66" FontFamily="{StaticResource PhoneFontFamilySemiLight}" 
+                                                        HorizontalAlignment="Left" Margin="52,-2,0,38">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{TemplateBinding Header}" />
+                                                    <TextBlock Text="{TemplateBinding Tag}" 
+                                                           Margin="0,0,0,14"
+                                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                                           VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                                                </StackPanel>
+                                            </ContentControl>
+                                        </Grid>
+                                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Grid.Row="1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </phone:PanoramaItem.Resources>
+                <phone:PanoramaItem.Style>
+                    <StaticResource ResourceKey="PanoramaItemStyle1"/>
+                </phone:PanoramaItem.Style>
+                <Grid>
+                    <CheckBox x:Name="UseLockscreen" Grid.Column="1" 
+                              Checked="OnCheckedLockscreen" 
+                              Unchecked="OnUncheckedLockscreen"
+                              HorizontalAlignment="Left" VerticalAlignment="Top" 
+                              Content="" Margin="-6,-112,00,0"/>
+                    <StackPanel Orientation="Horizontal" Height="36" VerticalAlignment="Top" Margin="0,-40,0,0" 
+                                Visibility="{Binding LockscreenEditWarnning, ElementName=mainPage, Converter={StaticResource VisibilityConverter}}">
+                        <Image Source="/Images/lockscreen/appbar.transit.hazard.png" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.MsgNeedEditLockscreen, Source={StaticResource LocalizedStrings}}" 
+                                   FontSize="{StaticResource PhoneFontSizeSmall}"
+                                   VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <toolkit:LongListMultiSelector x:Name="LockscreenSelector" 
+                                                   Margin="0,0,0,20"
+                                                   IsGroupingEnabled="False"
+                                                   LayoutMode="Grid"
+                                                   HideEmptyGroups="True"
+                                                   ItemTemplate="{StaticResource LockscreenPictureItemTemplate}" />
+                    <TextBlock x:Name="TxtLockscreen" Text="{Binding Path=LocalizedResources.MsgNoDataLockscreen, Source={StaticResource LocalizedStrings}}" 
+                               TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" 
+                               Foreground="{StaticResource PhoneSubtleBrush}"
+                               Visibility="Collapsed"/>
+                </Grid>
+            </phone:PanoramaItem>
+
+            <!--Panorama 항목 2-->
+            <phone:PanoramaItem x:Name="PIWeather" Header="{Binding Path=LocalizedResources.Weather, Source={StaticResource LocalizedStrings}}">
+                <phone:PanoramaItem.Resources>
+                    <Style x:Key="PanoramaItemStyle1" TargetType="phone:PanoramaItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="phone:PanoramaItem">
+                                    <Grid Background="{TemplateBinding Background}" Margin="12,0,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid x:Name="WeatherHeader"
+                                              MouseLeave="PIHeader_MouseLeave"
+                                              MouseLeftButtonDown="PIHeader_MouseDown"
+                                              Tap="PIHeader_Tap">
+                                            <Image x:Name="WeatherHeaderIcon"
+                                                   Width="56" Height="56" Stretch="Uniform" 
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top" 
+                                                   Loaded="Image_Loaded" Source="/Images/dark/weather.refresh.png"
+                                                   Margin="0,20,0,0" />
+                                            <ContentControl x:Name="header" CharacterSpacing="-35" 
+                                                        ContentTemplate="{TemplateBinding HeaderTemplate}" 
+                                                        Content="{TemplateBinding Header}" 
+                                                        FontSize="66" FontFamily="{StaticResource PhoneFontFamilySemiLight}" 
+                                                        HorizontalAlignment="Left" Margin="64,-2,0,38"/>
+                                        </Grid>
+                                        <ContentPresenter Content="{TemplateBinding Content}" 
+                                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                          Margin="{TemplateBinding Padding}" Grid.Row="1" 
+                                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </phone:PanoramaItem.Resources>
+                <phone:PanoramaItem.Style>
+                    <StaticResource ResourceKey="PanoramaItemStyle1"/>
+                </phone:PanoramaItem.Style>
+                <StackPanel Margin="0,-30,0,0">
+                    <TextBlock x:Name="TxtWeatherNoCity" Margin="12,30,0,0"  Height="250"
+                               Text="{Binding Path=LocalizedResources.MsgNoDataWeather, Source={StaticResource LocalizedStrings}}" 
+                               TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" Visibility="Collapsed"
+                               Foreground="{StaticResource PhoneSubtleBrush}"/>
+
+                    <Grid x:Name="GridLiveWeather" Height="300" Tap="LiveWeather_Click">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="48" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+    
+                        <Grid x:Name="GrdLiveWeatherTemp" 
+                              HorizontalAlignment="Center"
+                              Height="172"
+                              Grid.Column="0" 
+                              Grid.Row="1">
+                            <Border x:Name="BrdLiveWeatherFeelTemp" 
+                                    Height="35" 
+                                    BorderThickness="0,0,0,3"
+                                    VerticalAlignment="Top"
+                                    Margin="0,-24,0,0"
+                                    HorizontalAlignment="Center"
+                                    BorderBrush="{StaticResource PhoneForegroundBrush}">
+                                <TextBlock x:Name="TxtLiveWeatherFeelTemp" 
+                                           Text="체감 온도 35&#176;C" 
+                                           FontSize="18" 
+                                           Margin="0" 
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel Orientation="Horizontal"
+                                        VerticalAlignment="Center">
+                                <TextBlock Grid.Column="0" 
+                                           x:Name="TxtLiveWeatherTemp" 
+                                           Text="-20"
+                                           Width="172"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="135" 
+                                           TextAlignment="Center" />
+                                <Grid x:Name="GrdTempSub"
+                                      VerticalAlignment="Center"
+                                      Margin="0,17,0,0"
+                                      Height="120">
+                                    <TextBlock x:Name="TxtLiveWeatherTempUnits" 
+                                               Text="&#176;C" 
+                                               Grid.Row="0"
+                                               FontSize="30" 
+                                               Margin="0,0,0,0" 
+                                               Foreground="White"
+                                               VerticalAlignment="Top" 
+                                               HorizontalAlignment="Left" />
+                                    <TextBlock x:Name="TxtLiveWeatherTempFloat" 
+                                               Text=".0" 
+                                               Grid.Row="1"
+                                               FontSize="45" 
+                                               Margin="0,0,0,0"
+                                               Foreground="White"
+                                               VerticalAlignment="Bottom" 
+                                               HorizontalAlignment="Left" />
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBlock x:Name="TxtLiveWeatherTempRange" 
+                                   Grid.Column="0" 
+                                   Grid.Row="2"
+                                   Margin="0,-12,0,0"
+                                   Text="25 ~ 30&#176;C" 
+                                   FontSize="25"
+                                   VerticalAlignment="Top" 
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock x:Name="TxtLiveWeatherHumidity" 
+                                   Grid.Column="0"
+                                   Grid.Row="3"
+                                   Text="습도 62%" 
+                                   FontSize="18" 
+                                   Margin="12,0,0,0" 
+                                   HorizontalAlignment="Left"  />
+                        <TextBlock x:Name="TxtLiveWeatherWind" 
+                                   Grid.Column="0"
+                                   Grid.Row="4"
+                                   Text="Wind NNS 16km/h" 
+                                   FontSize="18" 
+                                   Margin="12,0,0,0" 
+                                   HorizontalAlignment="Left" />
+                        
+                        <StackPanel Grid.Column="1"
+                                    Grid.Row="0">
+                            <TextBlock x:Name="TxtLiveWeatherDtUpdated" 
+                                       Text="2013-08-29" 
+                                       FontSize="16" 
+                                       VerticalAlignment="Top" 
+                                       HorizontalAlignment="Right"/>
+                            <TextBlock x:Name="TxtLiveWeatherTmUpdated" 
+                                       Text="오후 6:59 기준" 
+                                       FontSize="16" 
+                                       VerticalAlignment="Top" 
+                                       HorizontalAlignment="Right"/>
+                        </StackPanel>
+
+                        <Image x:Name="ImgLiveWeatherIcon"
+                               Stretch="None"
+                               Grid.Column="1" 
+                               Grid.Row="1"
+                               Source="/Images/weather/simple01/205x172/cond009.png" />
+                        
+                        <TextBlock x:Name="TxtLiveWeatherCondition" 
+                                   Grid.Column="1"
+                                   Grid.RowSpan="2"
+                                   Grid.Row="3"
+                                   Margin="-15"
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Top"
+                                   TextWrapping="Wrap"
+                                   Text="80% Chance Rain Shower" 
+                                   FontSize="25" />
+                    </Grid>
+                    <ListBox x:Name="ListBoxForecasts"
+                             ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                             ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                             Margin="0,24,0,0" 
+                             ItemTemplate="{StaticResource WeatherForecastItemTemplate}" 
+                             Tap="ListBoxForecasts_Tap">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                    <ListBox x:Name="ListBoxNightForecasts"
+                             Visibility="Collapsed"
+                             ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                             ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                             Margin="0,24,0,0" 
+                             ItemTemplate="{StaticResource WeatherForecastNightItemTemplate}" 
+                             Tap="ListBoxNightForecasts_Tap">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                    </ListBox>
+                    <Canvas Margin="0,6,0,0" >
+                        <TextBlock x:Name="TxtForecastDescription" 
+                                   TextWrapping="NoWrap"
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Center">
+                        </TextBlock>
+                    </Canvas>
+                </StackPanel>
+            </phone:PanoramaItem>
+
+            <!--Panorama 항목 3-->
+            <phone:PanoramaItem x:Name="PICalendar" Header="Calendar" Tag="{Binding CurrentMonth, ElementName=mainPage}">
+                <phone:PanoramaItem.Resources>
+                    <Style x:Key="PanoramaItemStyle1" TargetType="phone:PanoramaItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="phone:PanoramaItem">
+                                    <Grid Background="{TemplateBinding Background}" Margin="12,0,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid x:Name="CalendarHeader"
+                                              MouseLeave="PIHeader_MouseLeave"
+                                              MouseLeftButtonDown="PIHeader_MouseDown"
+                                              Tap="PIHeader_Tap">
+                                            <Image x:Name="CalendarHeaderIcon"
+                                                   Width="46" Height="46" Stretch="Uniform" 
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top" 
+                                                   Loaded="Image_Loaded" Source="/Images/dark/calendar.refresh.png"
+                                                   Margin="0,22,0,0" />
+                                            <TextBlock x:Name="CurrentMonth" Text="{TemplateBinding Tag}" TextAlignment="Center" Width="46" Margin="0, 36, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+                                        <ContentControl x:Name="header" CharacterSpacing="-35" 
+                                                        ContentTemplate="{TemplateBinding HeaderTemplate}" 
+                                                        Content="{TemplateBinding Header}" 
+                                                        FontSize="66" FontFamily="{StaticResource PhoneFontFamilySemiLight}" 
+                                                        HorizontalAlignment="Left" Margin="64,-2,0,38" />
+                                        </Grid>
+                                        <ContentPresenter Content="{TemplateBinding Content}" 
+                                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                          Margin="{TemplateBinding Padding}" Grid.Row="1" 
+                                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </phone:PanoramaItem.Resources>
+                <phone:PanoramaItem.Style>
+                    <StaticResource ResourceKey="PanoramaItemStyle1"/>
+                </phone:PanoramaItem.Style>
+                <Grid Margin="0,-18,0,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <ItemsControl x:Name="CalendarHeader">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="8,0,8,8" Background="{Binding BackgroundBrush}" Width="44">
+                                        <Border Padding="0" Margin="0">
+                                            <TextBlock Text="{Binding DayName}" Margin="0" 
+                                                       FontSize="{StaticResource PhoneFontSizeSmall}" FontWeight="Bold" 
+                                                       Foreground="{Binding ForegroundBrush}"
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" />
+                                        </Border>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+
+                        <Border BorderThickness="0.5" BorderBrush="{StaticResource PhoneInactiveBrush}" Grid.Row="1" Margin="15,0,15,4" VerticalAlignment="Top"/>
+                        
+                        <ListBox x:Name="CalendarSelector" Grid.Row="2"
+                                 ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                                 ItemTemplate="{StaticResource CalendarItemTemplate}"
+                                 SelectionChanged="CalendarSelector_SelectionChanged" >
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <toolkit:WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+
+                        <phone:LongListSelector x:Name="CalendarAppointmentSelector" Grid.Row="3"
+                                                IsGroupingEnabled="False" HideEmptyGroups="True" 
+                                                ItemTemplate="{StaticResource CalendarAppointmentItemTemplate}"
+                                                Margin="0,0,0,68">
+                        </phone:LongListSelector>
+
+                    </Grid>
+                </Grid>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+        <Grid x:Name="LoadingProgressBar" Grid.RowSpan="2" Visibility="Collapsed" Background="{StaticResource PhoneBackgroundBrush}" Opacity="0.8" >
+            <ProgressBar VerticalAlignment="Center" IsIndeterminate="True" />
+            <TextBlock x:Name="LoadingText"  Text="" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,24,0,0"/>
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>

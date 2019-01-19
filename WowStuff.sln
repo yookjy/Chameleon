@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chameleon", "WowStuff\Chameleon.csproj", "{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChameleonScheduledTaskAgent", "ChameleonScheduledTaskAgent\ChameleonScheduledTaskAgent.csproj", "{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChameleonLib", "WowStuffLib\ChameleonLib.csproj", "{78F76B23-4114-413B-87E6-B860479EEF26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|ARM.Build.0 = Debug|ARM
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|x86.ActiveCfg = Debug|x86
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|x86.Build.0 = Debug|x86
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Debug|x86.Deploy.0 = Debug|x86
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|ARM.ActiveCfg = Release|ARM
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|ARM.Build.0 = Release|ARM
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|ARM.Deploy.0 = Release|ARM
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|x86.ActiveCfg = Release|x86
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|x86.Build.0 = Release|x86
+		{C9DAF62E-F683-4A3A-B89C-CE0B87244DB7}.Release|x86.Deploy.0 = Release|x86
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Debug|ARM.Build.0 = Debug|ARM
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Debug|x86.ActiveCfg = Debug|x86
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Debug|x86.Build.0 = Debug|x86
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Release|ARM.ActiveCfg = Release|ARM
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Release|ARM.Build.0 = Release|ARM
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Release|x86.ActiveCfg = Release|x86
+		{EDC21784-1B70-4166-BAF0-4FA6A4367D4A}.Release|x86.Build.0 = Release|x86
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Debug|ARM.ActiveCfg = Debug|ARM
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Debug|ARM.Build.0 = Debug|ARM
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Debug|x86.ActiveCfg = Debug|x86
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Debug|x86.Build.0 = Debug|x86
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Release|ARM.ActiveCfg = Release|ARM
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Release|ARM.Build.0 = Release|ARM
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Release|x86.ActiveCfg = Release|x86
+		{78F76B23-4114-413B-87E6-B860479EEF26}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

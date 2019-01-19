@@ -1,0 +1,95 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ChameleonLib.View.AppListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <!-- 제조사앱 그룹헤더 템플렛 -->
+        <DataTemplate x:Key="AppsEmptyGroupHeaderTemplate">
+        </DataTemplate>
+        <!-- 제조사앱 그룹헤더 템플렛 -->
+        <DataTemplate x:Key="AppsGroupHeaderTemplate">
+            <TextBlock Text="{Binding Name}" 
+                       FontSize="42" 
+                       FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                       Margin="12,-6,0,12" />
+        </DataTemplate>
+        <!-- 제조사앱 아이템 템플렛-->
+        <DataTemplate x:Key="AppsItemTemplate">
+            <StackPanel Orientation="Horizontal" 
+                        Margin="12,2,0,2" 
+                        Height="72" 
+                        Width="432">
+                <Image Source="{Binding ImageUri}" 
+                       Width="64" 
+                       Height="64" />
+                <StackPanel Margin="8,0,0,0" VerticalAlignment="Center" >
+                    <TextBlock Text="{Binding Name}" 
+                               TextWrapping="Wrap" 
+                               Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                               FontSize="{StaticResource PhoneFontSizeLarge}" />
+                    <TextBlock Text="{Binding AppId}" 
+                               Visibility="Collapsed" />
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot는 모든 페이지 내용이 배치되는 루트 표입니다.-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--피벗 컨트롤-->
+        <phone:Pivot Title="{Binding Path=LocalizedResources.ManufacturerApps, Source={StaticResource LocalizedStrings}}" 
+                     x:Name="PVApps"
+                     LoadingPivotItem="Pivot_LoadingPivotItem">
+            <!--피벗 항목 1-->
+            <phone:PivotItem x:Name="PIMfApps" Header="Manufacturer">
+                <Grid Margin="12, 0, 0, 6">
+                    <phone:LongListSelector x:Name="ManufacturerApps" 
+                                            Tap="ManufacturerApps_Tap" 
+                                            IsGroupingEnabled="True" 
+                                            GroupHeaderTemplate="{StaticResource AppsGroupHeaderTemplate}"
+                                            ItemTemplate="{StaticResource AppsItemTemplate}" >
+                        <!--기기의 제조사와 윈도우폰 버전을 읽어 들인 후 업데이트 할 수 있는 url을 알려준다 -->
+                    </phone:LongListSelector>
+                </Grid>
+            </phone:PivotItem>
+
+            <!--피벗 항목 2-->
+            <phone:PivotItem x:Name="PIMsApps" Header="Microsoft">
+                <Grid Margin="12, 0, 0, 6">
+                    <phone:LongListSelector x:Name="MicrosoftApps" 
+                                            Tap="ManufacturerApps_Tap" 
+                                            IsGroupingEnabled="True" 
+                                            GroupHeaderTemplate="{StaticResource AppsGroupHeaderTemplate}"
+                                            ItemTemplate="{StaticResource AppsItemTemplate}" >
+                        <!--기기의 제조사와 윈도우폰 버전을 읽어 들인 후 업데이트 할 수 있는 url을 알려준다 -->
+                    </phone:LongListSelector>
+                </Grid>
+            </phone:PivotItem>
+
+            <!--피벗 항목 3-->
+            <phone:PivotItem x:Name="PIVsApps" Header="Velostep">
+                <Grid Margin="12, 0, 0, 6">
+                    <phone:LongListSelector x:Name="VelostepApps" 
+                                            Tap="ManufacturerApps_Tap"
+                                            IsGroupingEnabled="True" 
+                                            GroupHeaderTemplate="{StaticResource AppsGroupHeaderTemplate}"
+                                            ItemTemplate="{StaticResource AppsItemTemplate}" >
+                        <!--기기의 제조사와 윈도우폰 버전을 읽어 들인 후 업데이트 할 수 있는 url을 알려준다 -->
+                    </phone:LongListSelector>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+    
+</phone:PhoneApplicationPage>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>qdfeed</id>
+    <version>1.1.0</version>
+    <title>Quick and Dirty Feed Parser</title>
+    <authors>Aaron Stannard</authors>
+    <owners>Aaron Stannard</owners>
+    <licenseUrl>https://github.com/Aaronontheweb/qdfeed/blob/master/license.txt</licenseUrl>
+    <projectUrl>https://github.com/Aaronontheweb/qdfeed</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A lightweight .NET library designed to give developers an agnostic way of parsing RSS 2.0 and Atom 1.0 XML syndication formats.</description>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>rss atom rss2.0 atom1.0 syndication qdfeed qdrss feeds xml parsing net40</tags>
+  </metadata>
+</package>

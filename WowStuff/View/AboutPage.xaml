@@ -1,0 +1,320 @@
+﻿<phone:PhoneApplicationPage
+    x:Name="aboutPage"
+    x:Class="Chameleon.View.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    toolkit:TiltEffect.IsTiltEnabled="True"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:SwivelTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:SwivelTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot는 모든 페이지 내용이 배치되는 루트 표입니다.-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--피벗 컨트롤-->
+        <phone:Pivot x:Name="AboutPivot">
+            <phone:Pivot.TitleTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding LauncherIcon, ElementName=aboutPage}" 
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Width="90"
+                               Height="90"/>
+                        <TextBlock Text="{Binding LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" 
+                                    Margin="0,-6,0,0"
+                                    VerticalAlignment="Center"
+                                    FontSize="{StaticResource PivotHeaderFontSize}"
+                                    Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </phone:Pivot.TitleTemplate>
+
+            <!--피벗 항목 1-->
+            <phone:PivotItem Header="{Binding LocalizedResources.AboutAbout, Source={StaticResource LocalizedStrings}}">
+                <StackPanel Margin="12,0,0,0">
+                    <TextBlock Text="{Binding LocalizedResources.AboutVersion, Source={StaticResource LocalizedStrings}}"
+                               Foreground="{StaticResource PhoneSubtleBrush}" />
+                    <TextBlock x:Name="AppVersion" Text="{Binding CurrentVersion}"
+                               Grid.Row="1"
+                               FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                    <TextBlock Text="{Binding LocalizedResources.AboutDevelopment, Source={StaticResource LocalizedStrings}}"
+                               Margin="0,6,0,0"
+                               Foreground="{StaticResource PhoneSubtleBrush}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="Developer" 
+                                   Text="{Binding LocalizedResources.AboutDeveloper, Source={StaticResource LocalizedStrings}}"
+                                   Grid.Column="0"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                        <TextBlock x:Name="DeveloperContact" 
+                                   Text="@yookjy"
+                                   Tag="link"
+                                   Margin="24,0,0,0"
+                                   Grid.Column="1"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                    </Grid>
+                    <TextBlock Text="{Binding LocalizedResources.AboutDesign, Source={StaticResource LocalizedStrings}}"
+                               Margin="0,6,0,0"
+                               Foreground="{StaticResource PhoneSubtleBrush}"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="Designer" 
+                                   Text="{Binding LocalizedResources.AboutDesigner, Source={StaticResource LocalizedStrings}}"
+                                   Grid.Column="0"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                        <TextBlock x:Name="DesignerContact" 
+                                   Text="@yookjy"
+                                   Tag="link"
+                                   Margin="24,0,0,0"
+                                   Grid.Column="1"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                    </Grid>
+                    <Grid Margin="0,6,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Grid.Row="0"
+                               HorizontalAlignment="Left"
+                               Width="56" Height="56"
+                               Source="{Binding RateReview}" />
+                        <TextBlock Grid.Column="1" Grid.Row="0"
+                                   x:Name="RateReview"
+                                   Tag="link"
+                                   VerticalAlignment="Center"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"
+                                   Text="{Binding LocalizedResources.AboutRateReview, Source={StaticResource LocalizedStrings}}" />
+                        <Image Grid.Column="0" Grid.Row="1"
+                               Width="56" Height="56"
+                               HorizontalAlignment="Left"
+                               Source="{Binding Facebook}" />
+                        <TextBlock Grid.Column="1" Grid.Row="1"
+                                   x:Name="Facebook"
+                                   Tag="link"
+                                   VerticalAlignment="Center"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"
+                                   Text="{Binding LocalizedResources.AboutFacebook, Source={StaticResource LocalizedStrings}}" />
+                        <Image Grid.Column="0" Grid.Row="2"
+                               HorizontalAlignment="Left"
+                               Width="56" Height="56"
+                               Source="{Binding Feedback}" />
+                        <TextBlock Grid.Column="1" Grid.Row="2"
+                                   x:Name="Feedback"
+                                   Tag="link"
+                                   VerticalAlignment="Center"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"
+                                   Text="{Binding LocalizedResources.AboutFeedback, Source={StaticResource LocalizedStrings}}" />
+                        <Image Grid.Column="0" Grid.Row="3"
+                               Width="56" Height="56"
+                               HorizontalAlignment="Center"
+                               Margin="6,0,0,0"
+                               Source="{Binding UserVoice}" />
+                        <TextBlock Grid.Column="1" Grid.Row="3"
+                                   x:Name="UserVoice"
+                                   Tag="link"
+                                   VerticalAlignment="Center"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"
+                                   Text="{Binding LocalizedResources.AboutUserVoice, Source={StaticResource LocalizedStrings}}" />
+                        <Image Grid.Column="0" Grid.Row="4"
+                               Width="56" Height="56"
+                               HorizontalAlignment="Left"
+                               Source="{Binding ShareApp}" />
+                        <TextBlock Grid.Column="1" Grid.Row="4"
+                                   x:Name="ShareApp"
+                                   Tag="link"
+                                   VerticalAlignment="Center"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"
+                                   Text="{Binding LocalizedResources.AboutShare, Source={StaticResource LocalizedStrings}}" />
+                    </Grid>
+                    <TextBlock Text="Copyright ⓒ Velostep Inc. All Rights Reserved."
+                               Margin="0,6,0,0"/>
+                </StackPanel>
+            </phone:PivotItem>
+
+            <!--피벗 항목 2-->
+            <phone:PivotItem Header="{Binding LocalizedResources.AboutWhatsNew, Source={StaticResource LocalizedStrings}}">
+                <phone:LongListSelector x:Name="LLSWhatsNew" 
+                                        Margin="0,0,0,6"
+                                        IsGroupingEnabled="True" 
+                                        ItemsSource="{Binding VersionList}">
+                    <phone:LongListSelector.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding VersionNumber}" FontSize="{StaticResource PhoneFontSizeLarge}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                                           Margin="12,-6,0,12" />
+                        </DataTemplate>
+                    </phone:LongListSelector.GroupHeaderTemplate>
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="18,0,12,6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Margin="0,6,0,0" Width="36"
+                                      VerticalAlignment="Top"
+                                      HorizontalAlignment="Left">
+                                    <Rectangle RadiusX="3" RadiusY="3" Fill="{Binding Background}" >
+                                    </Rectangle>
+                                    <TextBlock Text="{Binding Type}"
+                                               Margin="3,1,3,3"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center" FontSize="11" FontWeight="Bold"/>
+                                </Grid>
+                                <TextBlock Text="{Binding Content}" 
+                                           Margin="12,0,0,0"
+                                           Grid.Column="1"
+                                           TextWrapping="Wrap"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left" />
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PivotItem>
+            <!--피벗 항목 3-->
+            <phone:PivotItem Header="{Binding LocalizedResources.AboutCredits, Source={StaticResource LocalizedStrings}}">
+                <StackPanel Margin="12,0,0,6">
+                    <TextBlock FontSize="{StaticResource PhoneFontSizeMediumLarge}" 
+                               Foreground="{StaticResource PhoneSubtleBrush}"
+                               TextWrapping="Wrap"
+                               Text="{Binding LocalizedResources.AboutLibraryCreators, Source={StaticResource LocalizedStrings}}"
+                               />
+                    <TextBlock FontSize="{StaticResource PhoneFontSizeLarge}" 
+                               x:Name="LibraryCreator1"
+                               Text="WPToolkit"
+                               Tag="link"
+                               Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                               Margin="0,12,0,0"
+                               />
+                    <TextBlock FontSize="{StaticResource PhoneFontSizeLarge}" 
+                               x:Name="LibraryCreator2"
+                               Text="WriteableBitmapEx"
+                               Tag="link"
+                               Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                               Margin="0,12,0,0"
+                               />
+                    <TextBlock FontSize="{StaticResource PhoneFontSizeLarge}" 
+                               x:Name="LibraryCreator3"
+                               Text="JSON.Net"
+                               Tag="link"
+                               Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                               Margin="0,12,0,0"
+                               />
+                    <TextBlock FontSize="{StaticResource PhoneFontSizeLarge}" 
+                               x:Name="LibraryCreator4"
+                               Text="SharpZipLib"
+                               Tag="link"
+                               Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                               Margin="0,12,0,0"
+                               />
+                    <TextBlock FontSize="{StaticResource PhoneFontSizeMediumLarge}" 
+                               Foreground="{StaticResource PhoneSubtleBrush}"
+                               TextWrapping="Wrap"
+                               Text="{Binding LocalizedResources.AboutSpecialThanks, Source={StaticResource LocalizedStrings}}"
+                               Margin="0,24,0,0"
+                               />
+                    <Grid Margin="0,12,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="SpecialPeople1" 
+                                   Text="{Binding LocalizedResources.AboutSpecialPeople1, Source={StaticResource LocalizedStrings}}"
+                                   Grid.Column="0"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                    </Grid>
+                    <Grid Margin="0,12,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="SpecialPeople2" 
+                                   Text="{Binding LocalizedResources.AboutSpecialPeople2, Source={StaticResource LocalizedStrings}}"
+                                   Tag="link"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                        <TextBlock x:Name="SpecialPeople2Contact" 
+                                   Text=""
+                                   Margin="24,0,0,0"
+                                   Grid.Column="1"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                    </Grid>
+                    <!--
+                    <Grid Margin="0,12,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="SpecialPeople3" 
+                                   Text="{Binding LocalizedResources.AboutSpecialPeople3, Source={StaticResource LocalizedStrings}}"
+                                   Grid.Column="0"
+                                   Tag="link"
+                                   Foreground="{Binding LinkColor, ElementName=aboutPage}"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                        <TextBlock x:Name="SpecialPeople3Contact" 
+                                   Text=""
+                                   Margin="24,0,0,0"
+                                   Grid.Column="1"
+                                   FontSize="{StaticResource PhoneFontSizeLarge}"/>
+                    </Grid>
+                    -->
+                </StackPanel>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+    
+</phone:PhoneApplicationPage>

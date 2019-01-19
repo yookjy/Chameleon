@@ -1,0 +1,92 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Chameleon.View.AlbumPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:converter="clr-namespace:ChameleonLib.Converter;assembly=ChameleonLib"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    toolkit:TiltEffect.IsTiltEnabled="True"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:SwivelTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:SwivelTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <phone:PhoneApplicationPage.Resources>
+
+        <converter:VisibilityConverter x:Key="VisibilityConverter" />
+
+        <!-- Resources for Pictures LongListMultiSelector -->
+        <DataTemplate x:Key="AlbumPictureTemplate">
+            <Grid Margin="3" Tap="OnAlbumPictureTap">
+                <Image Source="{Binding ThumbnailImageSource}" 
+                       Stretch="UniformToFill" 
+                       CacheMode="BitmapCache" />
+                <Image Source="/Images/lockscreen/download.error.png"
+                       Width="37" Height="37"
+                       Margin="6"
+                       Visibility="{Binding ProgressStatus, Converter={StaticResource VisibilityConverter}, ConverterParameter=Null}"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left" />
+                <TextBlock Text="{Binding ProgressStatus}"
+                           Margin="48,14,0,0"
+                           TextWrapping="NoWrap"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Left"
+                           Visibility="{Binding ProgressStatus, Converter={StaticResource VisibilityConverter}, ConverterParameter=Null}"
+                           FontSize="14"/>
+            </Grid>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot는 모든 페이지 내용이 배치되는 루트 표입니다.-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel에는 응용 프로그램 이름 및 페이지 제목이 포함됩니다.-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="txtAlbumName" Text="페이지 이름" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - 여기에 추가 내용을 배치합니다.-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,68">
+            <toolkit:LongListMultiSelector x:Name="AlbumSelector"
+                                               IsGroupingEnabled="False"
+                                               GridCellSize="110,110"
+                                               LayoutMode="Grid"
+                                               HideEmptyGroups="True"
+                                               ItemTemplate="{StaticResource AlbumPictureTemplate}"
+                                               SelectionChanged="OnAlbumSelectorSelectionChanged" />
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

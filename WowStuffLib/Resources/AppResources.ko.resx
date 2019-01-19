@@ -1,0 +1,1454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppKeyHtcAttentivePhone" xml:space="preserve">
+    <value>어텐티브 폰</value>
+  </data>
+  <data name="AppKeyHtcBeatsAudio" xml:space="preserve">
+    <value>Beats Audio</value>
+  </data>
+  <data name="AppKeyHtcConnectionSetup" xml:space="preserve">
+    <value>연결 설정</value>
+  </data>
+  <data name="AppKeyHtcConverter" xml:space="preserve">
+    <value>변환기</value>
+  </data>
+  <data name="AppKeyHtcFlashLight" xml:space="preserve">
+    <value>플래시 라이트</value>
+  </data>
+  <data name="AppKeyHtcHtc" xml:space="preserve">
+    <value>HTC</value>
+  </data>
+  <data name="AppKeyHtcMakeMoreSpace" xml:space="preserve">
+    <value>추가 공간 만들기</value>
+  </data>
+  <data name="AppKeyHtcPhotoEnhancer" xml:space="preserve">
+    <value>사진 향상기</value>
+  </data>
+  <data name="AppKeyNokiaAccessories" xml:space="preserve">
+    <value>액세서리</value>
+  </data>
+  <data name="AppKeyNokiaAccessPoint" xml:space="preserve">
+    <value>액세스 포인트</value>
+  </data>
+  <data name="AppKeyNokiaAccount" xml:space="preserve">
+    <value>Nokia 계정</value>
+  </data>
+  <data name="AppKeyNokiaAppSocial" xml:space="preserve">
+    <value>인기앱</value>
+  </data>
+  <data name="AppKeyNokiaAudio" xml:space="preserve">
+    <value>오디오</value>
+  </data>
+  <data name="AppKeyNokiaCreativeStudio" xml:space="preserve">
+    <value>크리에이티브 스튜디오</value>
+  </data>
+  <data name="AppKeyNokiaDisplayTouch" xml:space="preserve">
+    <value>디스플레이+터치</value>
+  </data>
+  <data name="AppKeyNokiaExtraInfo" xml:space="preserve">
+    <value>기타+정보</value>
+  </data>
+  <data name="AppKeyNokiaFeedback" xml:space="preserve">
+    <value>Nokia에 피드백 보내기</value>
+  </data>
+  <data name="AppKeyNokiaMyNokia" xml:space="preserve">
+    <value>My Nokia</value>
+  </data>
+  <data name="AppKeyNokiaNetwork" xml:space="preserve">
+    <value>네트워크+</value>
+  </data>
+  <data name="AppKeyNokiaNokiaCare" xml:space="preserve">
+    <value>Nokia Care</value>
+  </data>
+  <data name="AppKeyNokiaNokiaGlamMe" xml:space="preserve">
+    <value>Nokia Glam Me</value>
+  </data>
+  <data name="AppKeyNokiaNokiaMusic" xml:space="preserve">
+    <value>Nokia MixRadio</value>
+  </data>
+  <data name="AppKeyNokiaNokiaTrailers" xml:space="preserve">
+    <value>Nokia Trailers</value>
+  </data>
+  <data name="AppKeyNokiaNokiaXpress" xml:space="preserve">
+    <value>Nokia Xpress</value>
+  </data>
+  <data name="AppKeyNokiaPanorama" xml:space="preserve">
+    <value>파노라마</value>
+  </data>
+  <data name="AppKeyNokiaPhotoBeamer" xml:space="preserve">
+    <value>PhotoBeamer</value>
+  </data>
+  <data name="AppKeyNokiaPlayTo" xml:space="preserve">
+    <value>Play to</value>
+  </data>
+  <data name="AppKeyNokiaRingtoneMaker" xml:space="preserve">
+    <value>벨소리 편집기</value>
+  </data>
+  <data name="AppKeyNokiaSmartShoot" xml:space="preserve">
+    <value>스마트 촬영</value>
+  </data>
+  <data name="AppKeyNokiaSophieLensForNokia" xml:space="preserve">
+    <value>SophieLens For Nokia</value>
+  </data>
+  <data name="AppKeyNokiaTransferMyData" xml:space="preserve">
+    <value>내 데이터 전송</value>
+  </data>
+  <data name="AppKeySamsungAddtionalCallSettings" xml:space="preserve">
+    <value>추가 통화 설정</value>
+  </data>
+  <data name="AppKeySamsungAdvancedTextMessages" xml:space="preserve">
+    <value>고급 문자 메시지</value>
+  </data>
+  <data name="AppKeySamsungApns" xml:space="preserve">
+    <value>APNs</value>
+  </data>
+  <data name="AppKeySamsungAtivBeam" xml:space="preserve">
+    <value>Ativ Beam</value>
+  </data>
+  <data name="AppKeySamsungBeauty" xml:space="preserve">
+    <value>Beauty</value>
+  </data>
+  <data name="AppKeySamsungCallBlocking" xml:space="preserve">
+    <value>call blocking</value>
+  </data>
+  <data name="AppKeySamsungChatOn" xml:space="preserve">
+    <value>ChatON</value>
+  </data>
+  <data name="AppKeySamsungContactsImport" xml:space="preserve">
+    <value>연락처 가져오기</value>
+  </data>
+  <data name="AppKeySamsungLiveWallpaper" xml:space="preserve">
+    <value>Live Wallpaper</value>
+  </data>
+  <data name="AppKeySamsungMiniDiary" xml:space="preserve">
+    <value>MiniDiary</value>
+  </data>
+  <data name="AppKeySamsungMusicHub" xml:space="preserve">
+    <value>Music Hub</value>
+  </data>
+  <data name="AppKeySamsungNow" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="AppKeySamsungPhotoEditor" xml:space="preserve">
+    <value>Photo Editor</value>
+  </data>
+  <data name="AppKeySamsungPhotogram" xml:space="preserve">
+    <value>Photogram</value>
+  </data>
+  <data name="AppKeySamsungRssTimes" xml:space="preserve">
+    <value>RSS Times</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>카멜레온</value>
+  </data>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+    <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>ko</value>
+    <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
+  </data>
+  <data name="AppCategoryExtra" xml:space="preserve">
+    <value>기타 앱</value>
+  </data>
+  <data name="AppCategorySystem" xml:space="preserve">
+    <value>시스템 앱</value>
+  </data>
+  <data name="ManufacturersApps" xml:space="preserve">
+    <value>{0} 앱</value>
+  </data>
+  <data name="MsgNoDataMfApps" xml:space="preserve">
+    <value>해당 폰에서 사용할 수 있는 앱이 없습니다.</value>
+  </data>
+  <data name="MsgNoDataLockscreen" xml:space="preserve">
+    <value>아래의 추가버튼을 탭하여 사진을 추가할 수 있습니다.</value>
+  </data>
+  <data name="MsgNoDataWeather" xml:space="preserve">
+    <value>아래의 검색버튼을 탭하여 도시를 추가할 수 있습니다.</value>
+  </data>
+  <data name="MsgNoDataCity" xml:space="preserve">
+    <value>도시명을 입력하고 검색버튼을 탭하면 도시를 추가할 수 있습니다.</value>
+  </data>
+  <data name="AppKeyNokiaNokiaVideoUpload" xml:space="preserve">
+    <value>Nokia Video Upload</value>
+  </data>
+  <data name="WeatherUpdatedTime" xml:space="preserve">
+    <value>{0} 기준</value>
+  </data>
+  <data name="AppKeyNokiaNokiaProCam" xml:space="preserve">
+    <value>Nokia Camera</value>
+  </data>
+  <data name="AppKeyNokiaNokiaSmartCam" xml:space="preserve">
+    <value>Nokia Smart Cam</value>
+  </data>
+  <data name="AppKeyNokiaNokiaVideoTrimmer" xml:space="preserve">
+    <value>Nokia Video Trimmer</value>
+  </data>
+  <data name="AppbarMenuAddLockscreen" xml:space="preserve">
+    <value>목록에 추가</value>
+  </data>
+  <data name="AppbarMenuAddMultipleImage" xml:space="preserve">
+    <value>여러장 추가</value>
+  </data>
+  <data name="AppbarMenuAddSingleImage" xml:space="preserve">
+    <value>한장 추가</value>
+  </data>
+  <data name="AppbarMenuRemove" xml:space="preserve">
+    <value>제거</value>
+  </data>
+  <data name="AppbarMenuSelect" xml:space="preserve">
+    <value>선택</value>
+  </data>
+  <data name="WeatherLiveFeelsLike" xml:space="preserve">
+    <value>체감온도 {0}</value>
+  </data>
+  <data name="WeatherLiveHumidity" xml:space="preserve">
+    <value>습도 {0}{1}</value>
+  </data>
+  <data name="WeatherLiveWind" xml:space="preserve">
+    <value>{0} {1}{2}</value>
+  </data>
+  <data name="AppbarMenuSetLockscreen" xml:space="preserve">
+    <value>현재 락스크린으로 설정</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>달력</value>
+  </data>
+  <data name="Lockscreen" xml:space="preserve">
+    <value>락 스크린</value>
+  </data>
+  <data name="Livetile" xml:space="preserve">
+    <value>라이브 타일</value>
+  </data>
+  <data name="Weather" xml:space="preserve">
+    <value>날씨</value>
+  </data>
+  <data name="WeatherCurrentLocation" xml:space="preserve">
+    <value>현재 위치</value>
+  </data>
+  <data name="WeatherSearchCity" xml:space="preserve">
+    <value>도시 검색</value>
+  </data>
+  <data name="MsgNoDataBingImage" xml:space="preserve">
+    <value>검색어를 입력하고 검색버튼을 탭하면 웹에서 이미지를 다운로드 받으실 수 있습니다. (매월 선착순 5,000건)</value>
+  </data>
+  <data name="AddAppointment" xml:space="preserve">
+    <value>일정 추가</value>
+  </data>
+  <data name="AttenddesAccPerson" xml:space="preserve">
+    <value>외 {0}명</value>
+  </data>
+  <data name="BatteryCharging" xml:space="preserve">
+    <value>배터리 충전중</value>
+  </data>
+  <data name="BatteryRemaining" xml:space="preserve">
+    <value>남음</value>
+  </data>
+  <data name="DayShortener" xml:space="preserve">
+    <value>{0}일</value>
+  </data>
+  <data name="HourShortener" xml:space="preserve">
+    <value>{0}시간</value>
+  </data>
+  <data name="AppbarMenuFitLockscreen" xml:space="preserve">
+    <value>맞춤</value>
+  </data>
+  <data name="Extra" xml:space="preserve">
+    <value>기타</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="CalendarDisplayAppointment" xml:space="preserve">
+    <value>약속 표시</value>
+  </data>
+  <data name="CalendarFirstDayOfWeek" xml:space="preserve">
+    <value>일주일의 첫 요일</value>
+  </data>
+  <data name="WeatherUnit" xml:space="preserve">
+    <value>표시 단위 </value>
+  </data>
+  <data name="WeatherUnitCelsius" xml:space="preserve">
+    <value>섭씨 (°C)</value>
+  </data>
+  <data name="WeatherUnitFahrenheit" xml:space="preserve">
+    <value>화씨 (°F)</value>
+  </data>
+  <data name="SearchLanguageMarketplace" xml:space="preserve">
+    <value>검색언어 및 마켓플레이스</value>
+  </data>
+  <data name="BingToday" xml:space="preserve">
+    <value>오늘의 빙</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="ImageSearch" xml:space="preserve">
+    <value>웹 검색</value>
+  </data>
+  <data name="LanguageRegion_ar_XA" xml:space="preserve">
+    <value>아랍어(아라비아)</value>
+  </data>
+  <data name="LanguageRegion_en_ID" xml:space="preserve">
+    <value>영어(인도네시아)</value>
+  </data>
+  <data name="LanguageRegion_en_XA" xml:space="preserve">
+    <value>영어(아라비아)</value>
+  </data>
+  <data name="LanguageRegion_es_XL" xml:space="preserve">
+    <value>스페인어(라틴 아메리카)</value>
+  </data>
+  <data name="LanguageRegion_sl_SL" xml:space="preserve">
+    <value>슬로베니아어(슬로베니아)</value>
+  </data>
+  <data name="BingSearchAdult" xml:space="preserve">
+    <value>성인 컨텐츠</value>
+  </data>
+  <data name="BingSearchAspect" xml:space="preserve">
+    <value>비율</value>
+  </data>
+  <data name="BingSearchColor" xml:space="preserve">
+    <value>색상</value>
+  </data>
+  <data name="BingSearchFace" xml:space="preserve">
+    <value>구도</value>
+  </data>
+  <data name="BingSearchOptions" xml:space="preserve">
+    <value>옵션</value>
+  </data>
+  <data name="BingSearchSize" xml:space="preserve">
+    <value>사이즈</value>
+  </data>
+  <data name="BingSearchStyle" xml:space="preserve">
+    <value>스타일</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>컬러</value>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="DisableLocationDetection" xml:space="preserve">
+    <value>위치찾기 끔</value>
+  </data>
+  <data name="EnableHighlighting" xml:space="preserve">
+    <value>하이라이팅 켬</value>
+  </data>
+  <data name="Face" xml:space="preserve">
+    <value>얼굴</value>
+  </data>
+  <data name="Graphics" xml:space="preserve">
+    <value>그래픽</value>
+  </data>
+  <data name="Large" xml:space="preserve">
+    <value>큼</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>적당히 제한</value>
+  </data>
+  <data name="Monochrome" xml:space="preserve">
+    <value>흑백</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>제한하지 않음</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>사진</value>
+  </data>
+  <data name="Portrait" xml:space="preserve">
+    <value>상반신</value>
+  </data>
+  <data name="Small" xml:space="preserve">
+    <value>작음</value>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>정사각</value>
+  </data>
+  <data name="Strict" xml:space="preserve">
+    <value>엄격하게 제한</value>
+  </data>
+  <data name="Tall" xml:space="preserve">
+    <value>세로</value>
+  </data>
+  <data name="Wide" xml:space="preserve">
+    <value>가로</value>
+  </data>
+  <data name="BingSearchQueryCount" xml:space="preserve">
+    <value>검색결과 이미지의 최대갯수</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>높이</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>폭</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>로드 중...</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>검색 중...</value>
+  </data>
+  <data name="Crop" xml:space="preserve">
+    <value>자르기</value>
+  </data>
+  <data name="FlipToHorizontal" xml:space="preserve">
+    <value>좌우반전</value>
+  </data>
+  <data name="FlipToVertical" xml:space="preserve">
+    <value>상하반전</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>미리보기</value>
+  </data>
+  <data name="RotateToLeft" xml:space="preserve">
+    <value>좌측회전</value>
+  </data>
+  <data name="RotateToRight" xml:space="preserve">
+    <value>우측회전</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="Transform" xml:space="preserve">
+    <value>변형</value>
+  </data>
+  <data name="DomainFilter" xml:space="preserve">
+    <value>도메인 필터</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="BlackList" xml:space="preserve">
+    <value>차단된 도메인</value>
+  </data>
+  <data name="AgreeUseLocation" xml:space="preserve">
+    <value>위치정보 사용 동의</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="ImageStatusAdded" xml:space="preserve">
+    <value>추가 완료</value>
+  </data>
+  <data name="ImageStatusDownload" xml:space="preserve">
+    <value>다운로드 시작</value>
+  </data>
+  <data name="ImageStatusDownloaded" xml:space="preserve">
+    <value>다운로드 완료</value>
+  </data>
+  <data name="ImageStatusDownloading" xml:space="preserve">
+    <value>다운로드 중</value>
+  </data>
+  <data name="ImageStatusFailAdd" xml:space="preserve">
+    <value>추가 실패</value>
+  </data>
+  <data name="ImageStatusFailDownload" xml:space="preserve">
+    <value>다운로드 실패</value>
+  </data>
+  <data name="MsgAllowDomainFilter" xml:space="preserve">
+    <value>해당 도메인을 검색범위에서 제외하시겠습니까?</value>
+  </data>
+  <data name="MsgCheckingLocation" xml:space="preserve">
+    <value>현재 위치를 확인 중입니다.</value>
+  </data>
+  <data name="MsgCityEx" xml:space="preserve">
+    <value>예) {0} =&gt; {1} 또는 {2}</value>
+  </data>
+  <data name="MsgConfirmUseLocation" xml:space="preserve">
+    <value>앱에서 폰의 위치정보를 사용하도록 허용합니다.</value>
+  </data>
+  <data name="MsgEnterCity" xml:space="preserve">
+    <value>도시명을 입력하세요.</value>
+  </data>
+  <data name="MsgEnterSearchKeyword" xml:space="preserve">
+    <value>검색어를 입력하세요.</value>
+  </data>
+  <data name="MsgEnteryAsEng" xml:space="preserve">
+    <value>도시명을 영어로 검색해 보세요.</value>
+  </data>
+  <data name="MsgErrorWeatherServerMsg" xml:space="preserve">
+    <value>날씨 서버에서 수신된 메세지에서 오류가 발생하였습니다.</value>
+  </data>
+  <data name="MsgFailAddLockscreen" xml:space="preserve">
+    <value>락스크린 목록에 추가하지 못했습니다. 에러원인 : {0}</value>
+  </data>
+  <data name="MsgFailAddMaxCount" xml:space="preserve">
+    <value>락스크린 이미지는 최대 {0}개입니다. 더 추가하시려면 기존 락스크린 이미지를  삭제하세요.</value>
+  </data>
+  <data name="MsgFailLocationService" xml:space="preserve">
+    <value>폰설정의 위치서비스가 활성화 되어 있지 않습니다. 위치 서비스를 활성화 하시겠습니까?</value>
+  </data>
+  <data name="MsgFailSaveImage" xml:space="preserve">
+    <value>이미지를 저장하지 못했습니다. 에러원인 :{0}</value>
+  </data>
+  <data name="MsgFailWeatherService" xml:space="preserve">
+    <value>일시적으로 날씨 서비스를 이용할 수 없습니다. 잠시후 다시 시도하세요.</value>
+  </data>
+  <data name="MsgNoResultCity" xml:space="preserve">
+    <value>검색된 결과가 없습니다.</value>
+  </data>
+  <data name="MsgNotSupportWeatherLocation" xml:space="preserve">
+    <value>해당 지역은 실시간 날씨가 제공되고 있지 않습니다.</value>
+  </data>
+  <data name="MsgQueryLiveWeather" xml:space="preserve">
+    <value>날씨를 불러오는 중...</value>
+  </data>
+  <data name="MsgSuccessAddLockscreen" xml:space="preserve">
+    <value>락스크린 목록에 추가되었습니다.</value>
+  </data>
+  <data name="MsgSuccessSaveImage" xml:space="preserve">
+    <value>이미지가 저장 되었습니다.</value>
+  </data>
+  <data name="MsgWrongImage" xml:space="preserve">
+    <value>이미 삭제되었거나 로드할 수 없는 이미지 입니다. </value>
+  </data>
+  <data name="Album" xml:space="preserve">
+    <value>앨범</value>
+  </data>
+  <data name="BingWeb" xml:space="preserve">
+    <value>빙 이미지</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="SelectPicture" xml:space="preserve">
+    <value>사진선택</value>
+  </data>
+  <data name="SettingGroupBingCommon" xml:space="preserve">
+    <value>빙 공통</value>
+  </data>
+  <data name="SettingGroupBingSearch" xml:space="preserve">
+    <value>빙 검색</value>
+  </data>
+  <data name="Capital" xml:space="preserve">
+    <value>서울</value>
+  </data>
+  <data name="HideMenu" xml:space="preserve">
+    <value>메뉴에서 숨김</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>메뉴</value>
+  </data>
+  <data name="LockscreenItemBackgroundColor" xml:space="preserve">
+    <value>표시항목의 배경 색상</value>
+  </data>
+  <data name="LockscreenItemBackgroundOpacity" xml:space="preserve">
+    <value>표시항목의 배경 불투명도 ({0}%)</value>
+  </data>
+  <data name="LockscreenItemForegroundColor" xml:space="preserve">
+    <value>표시항목의 글자 색상</value>
+  </data>
+  <data name="LockscreenItemForegroundOpacity" xml:space="preserve">
+    <value>표시항목의 글자 불투명도 ({0}%}</value>
+  </data>
+  <data name="AccentColor" xml:space="preserve">
+    <value>현재 테마</value>
+  </data>
+  <data name="ImageStatusAdding" xml:space="preserve">
+    <value>추가 중...</value>
+  </data>
+  <data name="ImageStatusFailSave" xml:space="preserve">
+    <value>저장 실패</value>
+  </data>
+  <data name="ImageStatusTimeOut" xml:space="preserve">
+    <value>시간 초과</value>
+  </data>
+  <data name="ImageStatusAdd" xml:space="preserve">
+    <value>추가 시작</value>
+  </data>
+  <data name="ColorChrome" xml:space="preserve">
+    <value>크롬</value>
+  </data>
+  <data name="ColorTransparent" xml:space="preserve">
+    <value>투명</value>
+  </data>
+  <data name="LockscreenItemBackgroundTemplate" xml:space="preserve">
+    <value>락스크린 템플릿</value>
+  </data>
+  <data name="Battery" xml:space="preserve">
+    <value>배터리</value>
+  </data>
+  <data name="LockscreenBackgroundItemSeparation" xml:space="preserve">
+    <value>표시항목의 배경 분할</value>
+  </data>
+  <data name="LockscreenNoWeatherData" xml:space="preserve">
+    <value>날씨 메뉴에서 조회한 지역의 날씨가 여기에 표시됩니다.</value>
+  </data>
+  <data name="ColorAmber" xml:space="preserve">
+    <value>황색</value>
+  </data>
+  <data name="ColorBrown" xml:space="preserve">
+    <value>갈색</value>
+  </data>
+  <data name="ColorCobalt" xml:space="preserve">
+    <value>코발트</value>
+  </data>
+  <data name="ColorCrimson" xml:space="preserve">
+    <value>진홍색</value>
+  </data>
+  <data name="ColorCyan" xml:space="preserve">
+    <value>녹청</value>
+  </data>
+  <data name="ColorEmerald" xml:space="preserve">
+    <value>에메랄드</value>
+  </data>
+  <data name="ColorGreen" xml:space="preserve">
+    <value>초록</value>
+  </data>
+  <data name="ColorIndigo" xml:space="preserve">
+    <value>남색</value>
+  </data>
+  <data name="ColorLightGray" xml:space="preserve">
+    <value>밝은 회색</value>
+  </data>
+  <data name="ColorLime" xml:space="preserve">
+    <value>라임</value>
+  </data>
+  <data name="ColorMagenta" xml:space="preserve">
+    <value>자홍</value>
+  </data>
+  <data name="ColorMauve" xml:space="preserve">
+    <value>연한 자주</value>
+  </data>
+  <data name="ColorOlive" xml:space="preserve">
+    <value>올리브</value>
+  </data>
+  <data name="ColorOrange" xml:space="preserve">
+    <value>주황</value>
+  </data>
+  <data name="ColorPink" xml:space="preserve">
+    <value>분홍</value>
+  </data>
+  <data name="ColorRed" xml:space="preserve">
+    <value>빨강</value>
+  </data>
+  <data name="ColorSienna" xml:space="preserve">
+    <value>황갈색</value>
+  </data>
+  <data name="ColorSteel" xml:space="preserve">
+    <value>스틸</value>
+  </data>
+  <data name="ColorTeal" xml:space="preserve">
+    <value>청록</value>
+  </data>
+  <data name="ColorViolet" xml:space="preserve">
+    <value>보라</value>
+  </data>
+  <data name="ColorYellow" xml:space="preserve">
+    <value>노랑</value>
+  </data>
+  <data name="BuyApp" xml:space="preserve">
+    <value>풀버전 구매</value>
+  </data>
+  <data name="FixSkinColor" xml:space="preserve">
+    <value>배경 색상</value>
+  </data>
+  <data name="ImageSettings" xml:space="preserve">
+    <value>이미지 설정</value>
+  </data>
+  <data name="LivetileCalendarBackgroundColor" xml:space="preserve">
+    <value>달력 라이브타일의 배경 색상</value>
+  </data>
+  <data name="LivetileWeatherBackgroundColor" xml:space="preserve">
+    <value>날씨 라이브타일의 배경 색상</value>
+  </data>
+  <data name="ProtectiveColor" xml:space="preserve">
+    <value>보호색</value>
+  </data>
+  <data name="SkinImage" xml:space="preserve">
+    <value>배경 이미지 (무작위)</value>
+  </data>
+  <data name="UpdateIntervalLivetile" xml:space="preserve">
+    <value>라이브타일의 업데이트 주기</value>
+  </data>
+  <data name="UpdateIntervalLockscreen" xml:space="preserve">
+    <value>락스크린의 업데이트 주기</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="MsgConfirmLockscreenUpdate" xml:space="preserve">
+    <value>주기적으로 락스크린을 변경하시겠습니까?</value>
+  </data>
+  <data name="UpdateIntervalWeather" xml:space="preserve">
+    <value>날씨 업데이트 주기</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>주일</value>
+  </data>
+  <data name="MsgFailChangeLockscreen" xml:space="preserve">
+    <value>오류가 발생하여 락스크린을 변경할 수 없습니다.</value>
+  </data>
+  <data name="MsgSuccessChangeLockscreen" xml:space="preserve">
+    <value>락스크린이 변경되었습니다.</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>오늘</value>
+  </data>
+  <data name="MsgNeedEditLockscreen" xml:space="preserve">
+    <value>편집하지 않으면 스케쥴링에서 제외됩니다.</value>
+  </data>
+  <data name="MsgEditedAutomatically" xml:space="preserve">
+    <value>락스크린으로 설정할 수 있도록 이미지가 자동 편집되었습니다. 저장하시겠습니까?</value>
+  </data>
+  <data name="MsgCanceledAddImage" xml:space="preserve">
+    <value>일부 이미지 추가 작업이 취소되었습니다.</value>
+  </data>
+  <data name="MsgIsCancleAddImage" xml:space="preserve">
+    <value>목록에 이미지를 추가하는 중입니다. 취소하시겠습니까?</value>
+  </data>
+  <data name="MsgWaitAddImage" xml:space="preserve">
+    <value>목록에 이미지를 추가하는 중입니다. 잠시만 기다려 주세요.</value>
+  </data>
+  <data name="MsgCanceledDownloadImage" xml:space="preserve">
+    <value>선택된 이미지 다운로드가 부분적으로 취소되었습니다.</value>
+  </data>
+  <data name="MsgIsCancleDownloadImage" xml:space="preserve">
+    <value>선택된 이미지를 다운로드 중입니다. 취소하시겠습니까?</value>
+  </data>
+  <data name="MsgWaitDownloadImage" xml:space="preserve">
+    <value>선택된 이미지를 다운로드 중입니다. 잠시만 기다려 주세요.</value>
+  </data>
+  <data name="MsgSetFirstImageToLockscreen" xml:space="preserve">
+    <value>현재 지정된 락스크린 이미지가 없습니다. 첫번째 이미지를 락스크린으로 지정하시겠습니까?</value>
+  </data>
+  <data name="Appointment" xml:space="preserve">
+    <value>일정</value>
+  </data>
+  <data name="AppointmentCount" xml:space="preserve">
+    <value>건</value>
+  </data>
+  <data name="FrontSide" xml:space="preserve">
+    <value>(앞)</value>
+  </data>
+  <data name="LivetileBatteryBackgroundColor" xml:space="preserve">
+    <value>배터리 라이브타일의 배경 색상</value>
+  </data>
+  <data name="RearSide" xml:space="preserve">
+    <value>(뒤)</value>
+  </data>
+  <data name="ShortcutSettingsLockscreen" xml:space="preserve">
+    <value>잠금화면 설정</value>
+  </data>
+  <data name="SystemSettings" xml:space="preserve">
+    <value>시스템 설정</value>
+  </data>
+  <data name="PinBatteryLivetile" xml:space="preserve">
+    <value>배터리 타일</value>
+  </data>
+  <data name="PinCalendarLivetile" xml:space="preserve">
+    <value>달력 타일</value>
+  </data>
+  <data name="PinWeatherLivetile" xml:space="preserve">
+    <value>날씨 타일</value>
+  </data>
+  <data name="MsgPinLivetile" xml:space="preserve">
+    <value>시작화면에 {0}을 추가하시겠습니까?</value>
+  </data>
+  <data name="MsgUnPinLivetile" xml:space="preserve">
+    <value>시작화면에서 {0}을 제거 하시겠습니까?</value>
+  </data>
+  <data name="LivetileBatteryRemaining" xml:space="preserve">
+    <value>배터리 잔량</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>알수없음</value>
+  </data>
+  <data name="MsgDisabledBackgroundAgent" xml:space="preserve">
+    <value>사용자에 의해 카멜레온의 백그라운드 작업이 차단되어 있습니다.</value>
+  </data>
+  <data name="MsgExpiredTrial" xml:space="preserve">
+    <value>체험 기간이 만료되었습니다. 카멜레온을 입양하시겠습니까?</value>
+  </data>
+  <data name="MsgSearchMaxCount" xml:space="preserve">
+    <value>하루에 최대 5건까지 검색할  수 있습니다. </value>
+  </data>
+  <data name="RandomLivetileColor" xml:space="preserve">
+    <value>모든 라이브타일의 배경 색상 - 무작위</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="AppCategoryHere" xml:space="preserve">
+    <value>here 앱</value>
+  </data>
+  <data name="AppKeyNokiaHereCityLens" xml:space="preserve">
+    <value>HERE City Lens</value>
+  </data>
+  <data name="AppKeyNokiaHereDrivePlus" xml:space="preserve">
+    <value>HERE Drive+</value>
+  </data>
+  <data name="AppKeyNokiaHereMaps" xml:space="preserve">
+    <value>HERE Maps</value>
+  </data>
+  <data name="AppKeyNokiaHereTransit" xml:space="preserve">
+    <value>HERE Transit</value>
+  </data>
+  <data name="LockscreenNoWeatherBackData" xml:space="preserve">
+    <value>날씨 메뉴에서 조회한 지역의 주간날씨가 여기에 표시됩니다.</value>
+  </data>
+  <data name="AppCategoryImage" xml:space="preserve">
+    <value>이미지 앱</value>
+  </data>
+  <data name="AppKeyNokiaNokiaRefocus" xml:space="preserve">
+    <value>Nokia Refocus</value>
+  </data>
+  <data name="AppKeySamsungAppFolder" xml:space="preserve">
+    <value>App Folder</value>
+  </data>
+  <data name="ManufacturerApps" xml:space="preserve">
+    <value>시스템 &amp; 주요 앱 목록</value>
+  </data>
+  <data name="AppbarMenuDay" xml:space="preserve">
+    <value>주간</value>
+  </data>
+  <data name="AppbarMenuNight" xml:space="preserve">
+    <value>야간</value>
+  </data>
+  <data name="WeatherToday" xml:space="preserve">
+    <value>오늘</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>새로 고침</value>
+  </data>
+  <data name="Universe" xml:space="preserve">
+    <value>우주</value>
+  </data>
+  <data name="ImageStatusPending" xml:space="preserve">
+    <value>보류 중</value>
+  </data>
+  <data name="MsgAddDomainFilter" xml:space="preserve">
+    <value>다음부터 검색에서 제외 시키려면 탭하세요.</value>
+  </data>
+  <data name="MsgNoDownloadItem" xml:space="preserve">
+    <value>진행 중인 다운로드 없음</value>
+  </data>
+  <data name="MsgRequiredDataNetwork" xml:space="preserve">
+    <value>셀룰러 데이터연결 또는 WiFi 네트워크가 필요합니다. WiFi설정을 하시겠습니까?</value>
+  </data>
+  <data name="NetworkStatusNameCellular" xml:space="preserve">
+    <value>셀룰러 네트워크</value>
+  </data>
+  <data name="NetworkStatusNameDisconnect" xml:space="preserve">
+    <value>네트워크 연결 끊김</value>
+  </data>
+  <data name="NetworkStatusNameNone" xml:space="preserve">
+    <value>연결된 네트워크 없음</value>
+  </data>
+  <data name="NetworkStatusNamePC" xml:space="preserve">
+    <value>PC 연결</value>
+  </data>
+  <data name="NetworkStatusNameWiFi" xml:space="preserve">
+    <value>Wi-Fi 네트워크</value>
+  </data>
+  <data name="TitleDownloadItem" xml:space="preserve">
+    <value>다운로드 항목</value>
+  </data>
+  <data name="ImageStatusCanceled" xml:space="preserve">
+    <value>취소됨</value>
+  </data>
+  <data name="LockscreenEditPreview" xml:space="preserve">
+    <value>이미지 편집 및 미리보기</value>
+  </data>
+  <data name="NoForecast" xml:space="preserve">
+    <value>날씨</value>
+  </data>
+  <data name="ApplicationAbout" xml:space="preserve">
+    <value>카멜레온 정보</value>
+  </data>
+  <data name="AboutCredits" xml:space="preserve">
+    <value>도움Me</value>
+  </data>
+  <data name="AboutDesign" xml:space="preserve">
+    <value>디자인</value>
+  </data>
+  <data name="AboutDesigner" xml:space="preserve">
+    <value>육주용</value>
+  </data>
+  <data name="AboutDeveloper" xml:space="preserve">
+    <value>육주용</value>
+  </data>
+  <data name="AboutDevelopment" xml:space="preserve">
+    <value>개발</value>
+  </data>
+  <data name="AboutFacebook" xml:space="preserve">
+    <value>페이스북</value>
+  </data>
+  <data name="AboutFeedback" xml:space="preserve">
+    <value>앱 지원 및 피드백</value>
+  </data>
+  <data name="AboutLibraryCreators" xml:space="preserve">
+    <value>라이브러리 제작자</value>
+  </data>
+  <data name="AboutRateReview" xml:space="preserve">
+    <value>평가 및 리뷰</value>
+  </data>
+  <data name="AboutShare" xml:space="preserve">
+    <value>앱 공유</value>
+  </data>
+  <data name="AboutSpecialPeople1" xml:space="preserve">
+    <value>정보미</value>
+  </data>
+  <data name="AboutSpecialPeople2" xml:space="preserve">
+    <value>하정령</value>
+  </data>
+  <data name="AboutSpecialPeople3" xml:space="preserve">
+    <value>최길현</value>
+  </data>
+  <data name="AboutSpecialThanks" xml:space="preserve">
+    <value>특별히 도움을 주신 분들</value>
+  </data>
+  <data name="AboutUserVoice" xml:space="preserve">
+    <value>건의사항</value>
+  </data>
+  <data name="AboutVersion" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="AboutWhatsNew" xml:space="preserve">
+    <value>업데이트 내역</value>
+  </data>
+  <data name="UpdateHistory10001" xml:space="preserve">
+    <value>최초 릴리즈</value>
+  </data>
+  <data name="UpdateHistory10002" xml:space="preserve">
+    <value>라이브 날씨 지원</value>
+  </data>
+  <data name="UpdateHistory10003" xml:space="preserve">
+    <value>라이브 달력 지원</value>
+  </data>
+  <data name="UpdateHistory10004" xml:space="preserve">
+    <value>라이브 타일 지원\n• 날씨, 달력, 배터리</value>
+  </data>
+  <data name="UpdateHistory10005" xml:space="preserve">
+    <value>락스크린 지원\n• 날씨, 달력, 배터리\n• 폰 사진\n• 오늘의 빙 이미지 \n• 빙(웹) 이미지 검색</value>
+  </data>
+  <data name="UpdateHistory10006" xml:space="preserve">
+    <value>제조사 배포앱 바로가기 목록 지원\n• 노키아\n• 삼성\n• HTC</value>
+  </data>
+  <data name="UpdateHistory11101" xml:space="preserve">
+    <value>달력 레이아웃 수정\n• 오늘표시 백그라운드 위치 조정</value>
+  </data>
+  <data name="UpdateHistory11102" xml:space="preserve">
+    <value>신뢰성 향상</value>
+  </data>
+  <data name="UpdateHistory20001" xml:space="preserve">
+    <value>앱 런처 아이콘 변경</value>
+  </data>
+  <data name="UpdateHistory20002" xml:space="preserve">
+    <value>페이지 추가\n• 앱바 메뉴\n + 앱정보 페이지\n• 이미지 여러장 추가 메뉴\n  + 이미지 다운로더 페이지\n  + 오늘의 나사 이미지\n  + 나사 우주 x-ray 망원경 사진</value>
+  </data>
+  <data name="UpdateHistory20003" xml:space="preserve">
+    <value>기능 추가\n• 날씨 메뉴\n  + 국가별 번역 서비스 &amp; 야간 날씨 예보</value>
+  </data>
+  <data name="UpdateHistory20004" xml:space="preserve">
+    <value>최적화\n• 스케줄링 서비스\n• UI 및 UX</value>
+  </data>
+  <data name="UpdateHistory20005" xml:space="preserve">
+    <value>감소\n• 네트워크 패킷 사용량</value>
+  </data>
+  <data name="UpdateHistory20006" xml:space="preserve">
+    <value>향상\n• 전반적인 앱실행 속도\n• 락스크린 이미지 품질\n• 이미지 다운로드 속도</value>
+  </data>
+  <data name="UpdateHistory20007" xml:space="preserve">
+    <value>'락스크린 사용' 체크 안함에서 스케줄링 되는 버그</value>
+  </data>
+  <data name="UpdateHistory20008" xml:space="preserve">
+    <value>락스크린과 카멜레온 앱간의 동기화 버그</value>
+  </data>
+  <data name="UpdateHistory20009" xml:space="preserve">
+    <value>락스크린에서 자동으로 편집된 이미지의 경우 아이템이 작게 나오는 버그</value>
+  </data>
+  <data name="AboutAbout" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="UpdateHistory20101" xml:space="preserve">
+    <value>일기예보의 아이콘 및 타이틀 버그</value>
+  </data>
+  <data name="WeatherIcon" xml:space="preserve">
+    <value>날씨 아이콘</value>
+  </data>
+  <data name="WeatherIconPackNormal" xml:space="preserve">
+    <value>기본</value>
+  </data>
+  <data name="WeatherIconPackSimple01" xml:space="preserve">
+    <value>심플</value>
+  </data>
+  <data name="UpdateHistory21001" xml:space="preserve">
+    <value>잠금화면 미리보기\n• 미리보기 창과 편집화면이 겹쳐 보임</value>
+  </data>
+  <data name="UpdateHistory21002" xml:space="preserve">
+    <value>제조사 앱\n• 숨김 모드로 변경할 때, 날씨 메뉴의 앱바가 표시되지 않음</value>
+  </data>
+  <data name="UpdateHistory21003" xml:space="preserve">
+    <value>앱 용량 최적화 10MB ► 6MB</value>
+  </data>
+  <data name="UpdateHistory21004" xml:space="preserve">
+    <value>앱바 설정 버튼\n• 현재 화면의 설정 페이지 로딩</value>
+  </data>
+  <data name="UpdateHistory21005" xml:space="preserve">
+    <value>제조사 앱\n• 노키아 뮤직► 노키아 믹스 라디오</value>
+  </data>
+  <data name="UpdateHistory21006" xml:space="preserve">
+    <value>날씨 심플 아이콘모드 추가\n (기존 아이콘도 선택 가능)</value>
+  </data>
+  <data name="UpdateHistory21201" xml:space="preserve">
+    <value>-10도 이하에서 온도 글씨가 잘려 보임</value>
+  </data>
+  <data name="UpdateHistory21202" xml:space="preserve">
+    <value>설정 메뉴 진입시 간혹 앱이 종료됨</value>
+  </data>
+  <data name="AppKeyMicrosoftAlphajax" xml:space="preserve">
+    <value>AlphaJax</value>
+  </data>
+  <data name="AppKeyMicrosoftBingFinance" xml:space="preserve">
+    <value>Bing 금융</value>
+  </data>
+  <data name="AppKeyMicrosoftBingNews" xml:space="preserve">
+    <value>Bing 뉴스</value>
+  </data>
+  <data name="AppKeyMicrosoftBingSports" xml:space="preserve">
+    <value>Bing 스포츠</value>
+  </data>
+  <data name="AppKeyMicrosoftBingWeather" xml:space="preserve">
+    <value>Bing 날씨</value>
+  </data>
+  <data name="AppKeyMicrosoftBreeze" xml:space="preserve">
+    <value>Breeze</value>
+  </data>
+  <data name="AppKeyMicrosoftFacebook" xml:space="preserve">
+    <value>페이스북</value>
+  </data>
+  <data name="AppKeyMicrosoftFlowerz" xml:space="preserve">
+    <value>Flowerz</value>
+  </data>
+  <data name="AppKeyMicrosoftFreshPaint" xml:space="preserve">
+    <value>Fresh Paint</value>
+  </data>
+  <data name="AppKeyMicrosoftGroupme" xml:space="preserve">
+    <value>GroupMe</value>
+  </data>
+  <data name="AppKeyMicrosoftHaloLite" xml:space="preserve">
+    <value>Halo: SA Lite</value>
+  </data>
+  <data name="AppKeyMicrosoftMinesweeper" xml:space="preserve">
+    <value>Minesweeper</value>
+  </data>
+  <data name="AppKeyMicrosoftPdfReader" xml:space="preserve">
+    <value>PDF Reader</value>
+  </data>
+  <data name="AppKeyMicrosoftPhotosynth" xml:space="preserve">
+    <value>Photosynth</value>
+  </data>
+  <data name="AppKeyMicrosoftSkydrive" xml:space="preserve">
+    <value>OneDrive</value>
+  </data>
+  <data name="AppKeyMicrosoftSkype" xml:space="preserve">
+    <value>Skype</value>
+  </data>
+  <data name="AppKeyMicrosoftSudoku" xml:space="preserve">
+    <value>Sudoku</value>
+  </data>
+  <data name="AppKeyMicrosoftTranslator" xml:space="preserve">
+    <value>Translator</value>
+  </data>
+  <data name="AppKeyMicrosoftWeather" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="AppKeyMicrosoftWordament" xml:space="preserve">
+    <value>Wordament</value>
+  </data>
+  <data name="AppKeyMicrosoftXbox360Smartglass" xml:space="preserve">
+    <value>Xbox 360 SmartGlass</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxExtras" xml:space="preserve">
+    <value>Xbox Extras</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxMusic" xml:space="preserve">
+    <value>Xbox Music</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxOneSmartglass" xml:space="preserve">
+    <value>Xbox One SmartGlass</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxVideo" xml:space="preserve">
+    <value>Xbox Video</value>
+  </data>
+  <data name="AppKeyMicrosoftYoutube" xml:space="preserve">
+    <value>YouTube</value>
+  </data>
+  <data name="AppKeyNokiaNokiaNfcWriter" xml:space="preserve">
+    <value>Nokia NFC Writer</value>
+  </data>
+  <data name="AppKeyVelostepChameleon" xml:space="preserve">
+    <value>Chameleon</value>
+  </data>
+  <data name="AppKeyVelostepManufacturerApps" xml:space="preserve">
+    <value>Manufacturer Apps</value>
+  </data>
+  <data name="AppKeyVelostepWowpad" xml:space="preserve">
+    <value>와우패드 풀버전</value>
+  </data>
+  <data name="AppKeyMicrosoftAcademicSearch" xml:space="preserve">
+    <value>Academic Search</value>
+  </data>
+  <data name="AppKeyMicrosoftBlink" xml:space="preserve">
+    <value>BLINK</value>
+  </data>
+  <data name="AppKeyMicrosoftFaceMask" xml:space="preserve">
+    <value>Face Mask</value>
+  </data>
+  <data name="AppKeyMicrosoftFaceSwap" xml:space="preserve">
+    <value>Face Swap</value>
+  </data>
+  <data name="AppKeyMicrosoftFaceTouch" xml:space="preserve">
+    <value>Face Touch</value>
+  </data>
+  <data name="AppKeyMicrosoftLevel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="AppKeyMicrosoftNetworkSpeedTest" xml:space="preserve">
+    <value>Network Speed Test</value>
+  </data>
+  <data name="AppKeyMicrosoftOfficeRemote" xml:space="preserve">
+    <value>Office Remote</value>
+  </data>
+  <data name="AppKeyMicrosoftSocl" xml:space="preserve">
+    <value>socl</value>
+  </data>
+  <data name="AppKeyMicrosoftUnitConverter" xml:space="preserve">
+    <value>Unit Converter</value>
+  </data>
+  <data name="AppKeyMicrosoftYammer" xml:space="preserve">
+    <value>Yammer</value>
+  </data>
+  <data name="AppCategoryBing" xml:space="preserve">
+    <value>빙 앱</value>
+  </data>
+  <data name="AppCategoryMsResearch" xml:space="preserve">
+    <value>Microsoft Research</value>
+  </data>
+  <data name="AppCategoryMsStudio" xml:space="preserve">
+    <value>Microsoft Studios™</value>
+  </data>
+  <data name="AppCategorySocial" xml:space="preserve">
+    <value>소셜 앱</value>
+  </data>
+  <data name="AppCategoryFree" xml:space="preserve">
+    <value>무료 앱</value>
+  </data>
+  <data name="AppCategoryPaid" xml:space="preserve">
+    <value>유료 앱</value>
+  </data>
+  <data name="AppCategoryTry" xml:space="preserve">
+    <value>체험 가능</value>
+  </data>
+  <data name="AppKeyVelostepWowpadAmk" xml:space="preserve">
+    <value>와우패드 MK 광고버전</value>
+  </data>
+  <data name="AppKeyVelostepWowpadAtk" xml:space="preserve">
+    <value>와우패드 TK 광고버전</value>
+  </data>
+  <data name="AppKeyVelostepWowpadMk" xml:space="preserve">
+    <value>와우패드 MK</value>
+  </data>
+  <data name="AppKeyVelostepWowpadTk" xml:space="preserve">
+    <value>와우패드 TK</value>
+  </data>
+  <data name="UpdateHistory22001" xml:space="preserve">
+    <value>시스템 &amp; 주요앱 목록\n• 앱바 메뉴로 이동\n• Microsoft 앱 목록 추가\n• Velostep 앱 목록 추가\n• 제조사 앱 목록 \n + Nokia ► NFC Writer\n + Samsung ► Family Story</value>
+  </data>
+  <data name="UpdateHistory22002" xml:space="preserve">
+    <value>날씨 조회중 화면 비활성화 처리</value>
+  </data>
+  <data name="UpdateHistory22003" xml:space="preserve">
+    <value>네트워크 접속 체크</value>
+  </data>
+  <data name="UpdateHistory22101" xml:space="preserve">
+    <value>라이브타일, 락스크린\n• 일부 락스크린 템플릿 선택시 업데이트가 정상적으로 되지 않는 버그</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>앱 종료</value>
+  </data>
+  <data name="Flashlight" xml:space="preserve">
+    <value>손전등</value>
+  </data>
+  <data name="FlashlightOff" xml:space="preserve">
+    <value>꺼짐</value>
+  </data>
+  <data name="FlashlightOn" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="FlickeringFrequency" xml:space="preserve">
+    <value>감빡거림의 빈도</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>메인화면</value>
+  </data>
+  <data name="UseToggleSwitch" xml:space="preserve">
+    <value>토글 스위치 사용</value>
+  </data>
+  <data name="MsgFailGetLockscreen" xml:space="preserve">
+    <value>시스템 내부에서 오류가 감지되었습니다. 잠금화면을 설정하기 위해서는 시스템 재시작이 필요할 수 있습니다.  또는 "설정 &gt; 잠금화면"을 확인하세요.</value>
+  </data>
+  <data name="MsgFailShortGetLockscreen" xml:space="preserve">
+    <value>잠금화면 변경 오류! 폰 재시작 필요!</value>
+  </data>
+  <data name="UpdateHistory23001" xml:space="preserve">
+    <value>손전등 추가\n• 배터리 &amp; 손전등 타일\n• 손전등 페이지</value>
+  </data>
+  <data name="UpdateHistory23002" xml:space="preserve">
+    <value>사소한 UI버그</value>
+  </data>
+  <data name="UpdateHistory23101" xml:space="preserve">
+    <value>라이브타일\n• 특정 조건에서 업데이트가 정상적으로 되지 않는 버그</value>
+  </data>
+  <data name="UpdateHistory23102" xml:space="preserve">
+    <value>라이브타일, 락스크린\n• 달력의 일정 건수 표시 위치</value>
+  </data>
+  <data name="UpdateHistory23201" xml:space="preserve">
+    <value>락스크린 이미지 편집\n• 이미지를 자를때 좌측에 흰색선이 보임</value>
+  </data>
+  <data name="AppKeyNokiaAppFolder" xml:space="preserve">
+    <value>앱 폴더</value>
+  </data>
+  <data name="AppKeyNokiaCallSmsFilter" xml:space="preserve">
+    <value>통화+문자 메시지 필터</value>
+  </data>
+  <data name="AppKeyNokiaGlance" xml:space="preserve">
+    <value>보기 화면</value>
+  </data>
+  <data name="BatteryFull" xml:space="preserve">
+    <value>Full</value>
+  </data>
+  <data name="BatteryFullWPDefault" xml:space="preserve">
+    <value>윈도우폰 UX (99)</value>
+  </data>
+  <data name="LivetileBatteryFullDisplay" xml:space="preserve">
+    <value>배터리 라이브타일의 완충 표시</value>
+  </data>
+  <data name="UpdateHistory23501" xml:space="preserve">
+    <value>라이브타일\n• 배터리 완전 충전 표시 옵션 (Full, 99)</value>
+  </data>
+  <data name="UpdateHistory23502" xml:space="preserve">
+    <value>시스템 &amp; 주요앱 목록\n• 제조사 앱 목록\n + Nokia ► 통화+문자 메시지 필터, 보기 화면, 앱 폴더</value>
+  </data>
+  <data name="AppKeyMicrosoftBingFoodDrink" xml:space="preserve">
+    <value>빙 푸드</value>
+  </data>
+  <data name="AppKeyMicrosoftBingHealthFitness" xml:space="preserve">
+    <value>빙 헬스</value>
+  </data>
+  <data name="AppKeyMicrosoftBingTravel" xml:space="preserve">
+    <value>빙 여행</value>
+  </data>
+  <data name="AppKeyVelostepCcplayer" xml:space="preserve">
+    <value>CCPlayer</value>
+  </data>
+  <data name="AppKeyVelostepCcplayerFree" xml:space="preserve">
+    <value>CCPlayer Free</value>
+  </data>
+  <data name="UpdateHistory23601" xml:space="preserve">
+    <value>시스템 &amp; 주요앱 목록\n•  Microsoft 앱 추가\n + 빙 여행, 빙 푸드, 빙 헬스\n• Velostep 앱 추가\n + CCPlayer, CCPlayer Free </value>
+  </data>
+  <data name="UpdateHistory23602" xml:space="preserve">
+    <value>락스크린 일정표시 위치 조정</value>
+  </data>
+  <data name="LivetileWeatherFontSize" xml:space="preserve">
+    <value>날씨 라이브타일의 글자 크기</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="UpdateHistory23701" xml:space="preserve">
+    <value>라이브타일\n• 날씨타일의 설명 및 지역의 폰트 사이즈  조절기능 (설정 페이지)</value>
+  </data>
+  <data name="AppKeySamsungFamilyStory" xml:space="preserve">
+    <value>Family Story</value>
+  </data>
+  <data name="AppKeySamsungStoryAlbum" xml:space="preserve">
+    <value>Story Album</value>
+  </data>
+  <data name="UpdateHistory23801" xml:space="preserve">
+    <value>시스템 &amp; 주요앱 목록\n•  삼성 앱 추가\n + Story Album</value>
+  </data>
+  <data name="FontWeight" xml:space="preserve">
+    <value>글자 굵기</value>
+  </data>
+  <data name="LivetileFontWeight" xml:space="preserve">
+    <value>날씨 및 달력 라이브타일의 글자 굵기</value>
+  </data>
+  <data name="UpdateHistory24001" xml:space="preserve">
+    <value>락스크린\n• 표시항목의 배경 불투명도 버그</value>
+  </data>
+  <data name="UpdateHistory24002" xml:space="preserve">
+    <value>라이브타일, 락스크린\n• 글자 굵기 조절 기능</value>
+  </data>
+  <data name="UpdateHistory24101" xml:space="preserve">
+    <value>시스템 앱\n• 잘못된 제조사의 앱 목록이 나오는 버그</value>
+  </data>
+  <data name="UpdateHistory24201" xml:space="preserve">
+    <value>타 락스크린앱과의 호환성 개선</value>
+  </data>
+  <data name="UpdateHistory24301" xml:space="preserve">
+    <value>라이브 타일\n• 투명 타일 지원</value>
+  </data>
+  <data name="LocationServices" xml:space="preserve">
+    <value>위치 서비스</value>
+  </data>
+  <data name="MsgUseLocationServices" xml:space="preserve">
+    <value>위치 사용 설정이 비활성화 되어 있습니다. 활성화 하시겠습니까?</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>개인정보 정책</value>
+  </data>
+  <data name="MsgApplyingLockscreen" xml:space="preserve">
+    <value>락스크린 적용 중...</value>
+  </data>
+  <data name="MsgCreatingPreview" xml:space="preserve">
+    <value>미리보기 작성 중...</value>
+  </data>
+  <data name="UpdateHistory24401" xml:space="preserve">
+    <value>MS 앱정책 반영 (위치 서비스, 개인정보 정책)</value>
+  </data>
+  <data name="UpdateHistory24402" xml:space="preserve">
+    <value>로딩 패널 적용 (날씨조회, 락스크린설정, 미리보기 생성)</value>
+  </data>
+</root>

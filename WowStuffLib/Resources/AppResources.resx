@@ -1,0 +1,1458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+    <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>en</value>
+    <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>chameleon</value>
+  </data>
+  <data name="AppKeyHtcAttentivePhone" xml:space="preserve">
+    <value>Attentive Phone</value>
+  </data>
+  <data name="AppKeyHtcBeatsAudio" xml:space="preserve">
+    <value>Beats Audio</value>
+  </data>
+  <data name="AppKeyHtcConnectionSetup" xml:space="preserve">
+    <value>Connection Setup</value>
+  </data>
+  <data name="AppKeyHtcConverter" xml:space="preserve">
+    <value>Converter</value>
+  </data>
+  <data name="AppKeyHtcFlashLight" xml:space="preserve">
+    <value>Flashlight</value>
+  </data>
+  <data name="AppKeyHtcHtc" xml:space="preserve">
+    <value>HTC</value>
+  </data>
+  <data name="AppKeyHtcMakeMoreSpace" xml:space="preserve">
+    <value>Make More Space</value>
+  </data>
+  <data name="AppKeyHtcPhotoEnhancer" xml:space="preserve">
+    <value>Photo Enhancer</value>
+  </data>
+  <data name="AppKeyNokiaAccessories" xml:space="preserve">
+    <value>Accessories</value>
+  </data>
+  <data name="AppKeyNokiaAccessPoint" xml:space="preserve">
+    <value>Access Point</value>
+  </data>
+  <data name="AppKeyNokiaAccount" xml:space="preserve">
+    <value>Nokia Account</value>
+  </data>
+  <data name="AppKeyNokiaAppSocial" xml:space="preserve">
+    <value>App Social</value>
+  </data>
+  <data name="AppKeyNokiaAudio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="AppKeyNokiaCreativeStudio" xml:space="preserve">
+    <value>Creative Studio</value>
+  </data>
+  <data name="AppKeyNokiaDisplayTouch" xml:space="preserve">
+    <value>Display+Touch</value>
+  </data>
+  <data name="AppKeyNokiaExtraInfo" xml:space="preserve">
+    <value>Extra+Info</value>
+  </data>
+  <data name="AppKeyNokiaFeedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="AppKeyNokiaMyNokia" xml:space="preserve">
+    <value>My Nokia</value>
+  </data>
+  <data name="AppKeyNokiaNetwork" xml:space="preserve">
+    <value>Network+</value>
+  </data>
+  <data name="AppKeyNokiaNokiaCare" xml:space="preserve">
+    <value>Nokia Care</value>
+  </data>
+  <data name="AppKeyNokiaNokiaGlamMe" xml:space="preserve">
+    <value>Nokia Glam Me</value>
+  </data>
+  <data name="AppKeyNokiaNokiaMusic" xml:space="preserve">
+    <value>Nokia MixRadio</value>
+  </data>
+  <data name="AppKeyNokiaNokiaTrailers" xml:space="preserve">
+    <value>Nokia Trailers</value>
+  </data>
+  <data name="AppKeyNokiaNokiaXpress" xml:space="preserve">
+    <value>Nokia Xpress</value>
+  </data>
+  <data name="AppKeyNokiaPanorama" xml:space="preserve">
+    <value>Panorama</value>
+  </data>
+  <data name="AppKeyNokiaPhotoBeamer" xml:space="preserve">
+    <value>PhotoBeamer</value>
+  </data>
+  <data name="AppKeyNokiaPlayTo" xml:space="preserve">
+    <value>Play to</value>
+  </data>
+  <data name="AppKeyNokiaRingtoneMaker" xml:space="preserve">
+    <value>Ringtone Maker</value>
+  </data>
+  <data name="AppKeyNokiaSmartShoot" xml:space="preserve">
+    <value>Smart Shoot</value>
+  </data>
+  <data name="AppKeyNokiaSophieLensForNokia" xml:space="preserve">
+    <value>SophieLens For Nokia</value>
+  </data>
+  <data name="AppKeyNokiaTransferMyData" xml:space="preserve">
+    <value>Transfer my Data</value>
+  </data>
+  <data name="AppKeySamsungAddtionalCallSettings" xml:space="preserve">
+    <value>Additional call settings</value>
+  </data>
+  <data name="AppKeySamsungAdvancedTextMessages" xml:space="preserve">
+    <value>Advanced text messages</value>
+  </data>
+  <data name="AppKeySamsungApns" xml:space="preserve">
+    <value>APNs</value>
+  </data>
+  <data name="AppKeySamsungAtivBeam" xml:space="preserve">
+    <value>Ativ Beam</value>
+  </data>
+  <data name="AppKeySamsungBeauty" xml:space="preserve">
+    <value>Beauty</value>
+  </data>
+  <data name="AppKeySamsungCallBlocking" xml:space="preserve">
+    <value>call blocking</value>
+  </data>
+  <data name="AppKeySamsungChatOn" xml:space="preserve">
+    <value>ChatON</value>
+  </data>
+  <data name="AppKeySamsungContactsImport" xml:space="preserve">
+    <value>Contacts import</value>
+  </data>
+  <data name="AppKeySamsungLiveWallpaper" xml:space="preserve">
+    <value>Live Wallpaper</value>
+  </data>
+  <data name="AppKeySamsungMiniDiary" xml:space="preserve">
+    <value>MiniDiary</value>
+  </data>
+  <data name="AppKeySamsungMusicHub" xml:space="preserve">
+    <value>Music Hub</value>
+  </data>
+  <data name="AppKeySamsungNow" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="AppKeySamsungPhotoEditor" xml:space="preserve">
+    <value>Photo Editor</value>
+  </data>
+  <data name="AppKeySamsungPhotogram" xml:space="preserve">
+    <value>Photogram</value>
+  </data>
+  <data name="AppKeySamsungRssTimes" xml:space="preserve">
+    <value>RSS Times</value>
+  </data>
+  <data name="AppCategoryExtra" xml:space="preserve">
+    <value>extra apps</value>
+  </data>
+  <data name="AppCategorySystem" xml:space="preserve">
+    <value>system apps</value>
+  </data>
+  <data name="ManufacturersApps" xml:space="preserve">
+    <value>{0} Apps</value>
+  </data>
+  <data name="MsgNoDataLockscreen" xml:space="preserve">
+    <value>Tap the Add button below, you can add a picture.</value>
+  </data>
+  <data name="MsgNoDataMfApps" xml:space="preserve">
+    <value>There is no application that is available in this mobile phone.</value>
+  </data>
+  <data name="MsgNoDataWeather" xml:space="preserve">
+    <value>Tap the Search button below, you can add a City.</value>
+  </data>
+  <data name="MsgNoDataCity" xml:space="preserve">
+    <value>Enter a city name and tap the search button you can add the city.</value>
+  </data>
+  <data name="AppKeyNokiaNokiaVideoUpload" xml:space="preserve">
+    <value>Nokia Video Upload</value>
+  </data>
+  <data name="WeatherUpdatedTime" xml:space="preserve">
+    <value>{0} updated</value>
+  </data>
+  <data name="AppKeyNokiaNokiaProCam" xml:space="preserve">
+    <value>Nokia Camera</value>
+  </data>
+  <data name="AppKeyNokiaNokiaSmartCam" xml:space="preserve">
+    <value>Nokia Smart Cam</value>
+  </data>
+  <data name="AppKeyNokiaNokiaVideoTrimmer" xml:space="preserve">
+    <value>Nokia Video Trimmer</value>
+  </data>
+  <data name="AppbarMenuAddLockscreen" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="AppbarMenuAddMultipleImage" xml:space="preserve">
+    <value>add multi</value>
+  </data>
+  <data name="AppbarMenuAddSingleImage" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="AppbarMenuRemove" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="AppbarMenuSelect" xml:space="preserve">
+    <value>select</value>
+  </data>
+  <data name="WeatherLiveFeelsLike" xml:space="preserve">
+    <value>feels like {0}</value>
+  </data>
+  <data name="WeatherLiveHumidity" xml:space="preserve">
+    <value>humidity {0}{1}</value>
+  </data>
+  <data name="WeatherLiveWind" xml:space="preserve">
+    <value>wind {0} {1}{2}</value>
+  </data>
+  <data name="AppbarMenuSetLockscreen" xml:space="preserve">
+    <value>Set current lock screen</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>calendar</value>
+  </data>
+  <data name="Lockscreen" xml:space="preserve">
+    <value>lock screen</value>
+  </data>
+  <data name="Livetile" xml:space="preserve">
+    <value>live tiles</value>
+  </data>
+  <data name="Weather" xml:space="preserve">
+    <value>weather</value>
+  </data>
+  <data name="WeatherCurrentLocation" xml:space="preserve">
+    <value>my location</value>
+  </data>
+  <data name="WeatherSearchCity" xml:space="preserve">
+    <value>search city</value>
+  </data>
+  <data name="MsgNoDataBingImage" xml:space="preserve">
+    <value>Enter a Word, tap the search button can be downloaded an image from the Web. (First-come, first-served basis each month can be found up to 5,000 times.)</value>
+  </data>
+  <data name="AddAppointment" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="AttenddesAccPerson" xml:space="preserve">
+    <value>and {0} people</value>
+    <comment>and {0} accompanying persons</comment>
+  </data>
+  <data name="BatteryCharging" xml:space="preserve">
+    <value>battery charging</value>
+  </data>
+  <data name="BatteryRemaining" xml:space="preserve">
+    <value>remaining</value>
+  </data>
+  <data name="DayShortener" xml:space="preserve">
+    <value>{0}d</value>
+  </data>
+  <data name="HourShortener" xml:space="preserve">
+    <value>{0}hr</value>
+  </data>
+  <data name="AppbarMenuFitLockscreen" xml:space="preserve">
+    <value>fit</value>
+  </data>
+  <data name="Extra" xml:space="preserve">
+    <value>extra</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="SearchLanguageMarketplace" xml:space="preserve">
+    <value>Search language and marketplace</value>
+  </data>
+  <data name="BingToday" xml:space="preserve">
+    <value>bing today</value>
+  </data>
+  <data name="CalendarDisplayAppointment" xml:space="preserve">
+    <value>Display appointment</value>
+  </data>
+  <data name="CalendarFirstDayOfWeek" xml:space="preserve">
+    <value>First day of week</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>images</value>
+  </data>
+  <data name="ImageSearch" xml:space="preserve">
+    <value>search web</value>
+  </data>
+  <data name="WeatherUnit" xml:space="preserve">
+    <value>Display unit</value>
+  </data>
+  <data name="WeatherUnitCelsius" xml:space="preserve">
+    <value>Celsius (°C)</value>
+  </data>
+  <data name="WeatherUnitFahrenheit" xml:space="preserve">
+    <value>Fahrenheit (°F)</value>
+  </data>
+  <data name="BingSearchAdult" xml:space="preserve">
+    <value>adult</value>
+  </data>
+  <data name="BingSearchAspect" xml:space="preserve">
+    <value>aspect</value>
+  </data>
+  <data name="BingSearchColor" xml:space="preserve">
+    <value>color</value>
+  </data>
+  <data name="BingSearchFace" xml:space="preserve">
+    <value>face</value>
+  </data>
+  <data name="BingSearchOptions" xml:space="preserve">
+    <value>options</value>
+  </data>
+  <data name="BingSearchSize" xml:space="preserve">
+    <value>size</value>
+  </data>
+  <data name="BingSearchStyle" xml:space="preserve">
+    <value>style</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>color</value>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>custom</value>
+  </data>
+  <data name="DisableLocationDetection" xml:space="preserve">
+    <value>Disable location detection</value>
+  </data>
+  <data name="EnableHighlighting" xml:space="preserve">
+    <value>Enable highlighting</value>
+  </data>
+  <data name="Face" xml:space="preserve">
+    <value>face</value>
+  </data>
+  <data name="Graphics" xml:space="preserve">
+    <value>graphics</value>
+  </data>
+  <data name="LanguageRegion_ar_XA" xml:space="preserve">
+    <value>Arabic(Arabia)</value>
+  </data>
+  <data name="LanguageRegion_en_ID" xml:space="preserve">
+    <value>English(Indonesia)</value>
+  </data>
+  <data name="LanguageRegion_en_XA" xml:space="preserve">
+    <value>English(Arabia)</value>
+  </data>
+  <data name="LanguageRegion_es_XL" xml:space="preserve">
+    <value>Spanish(Latin America)</value>
+  </data>
+  <data name="LanguageRegion_sl_SL" xml:space="preserve">
+    <value>Slovenian(Slovenia)</value>
+  </data>
+  <data name="Large" xml:space="preserve">
+    <value>large</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>medium</value>
+  </data>
+  <data name="Moderate" xml:space="preserve">
+    <value>moderate</value>
+  </data>
+  <data name="Monochrome" xml:space="preserve">
+    <value>monochrome</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>off</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>other</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>photo</value>
+  </data>
+  <data name="Portrait" xml:space="preserve">
+    <value>portrait</value>
+  </data>
+  <data name="Small" xml:space="preserve">
+    <value>small</value>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>square</value>
+  </data>
+  <data name="Strict" xml:space="preserve">
+    <value>strict</value>
+  </data>
+  <data name="Tall" xml:space="preserve">
+    <value>tall</value>
+  </data>
+  <data name="Wide" xml:space="preserve">
+    <value>wide</value>
+  </data>
+  <data name="BingSearchQueryCount" xml:space="preserve">
+    <value>Maximum count of query results</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>height</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>width</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>loading...</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>searching...</value>
+  </data>
+  <data name="Crop" xml:space="preserve">
+    <value>cut</value>
+  </data>
+  <data name="FlipToHorizontal" xml:space="preserve">
+    <value>flip horizontal</value>
+  </data>
+  <data name="FlipToVertical" xml:space="preserve">
+    <value>flip vertical</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>preview</value>
+  </data>
+  <data name="RotateToLeft" xml:space="preserve">
+    <value>rotate left</value>
+  </data>
+  <data name="RotateToRight" xml:space="preserve">
+    <value>rotate right</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="Transform" xml:space="preserve">
+    <value>transform</value>
+  </data>
+  <data name="DomainFilter" xml:space="preserve">
+    <value>domain filter</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="BlackList" xml:space="preserve">
+    <value>black list</value>
+  </data>
+  <data name="AgreeUseLocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>confirm</value>
+  </data>
+  <data name="ImageStatusAdded" xml:space="preserve">
+    <value>added</value>
+  </data>
+  <data name="ImageStatusDownload" xml:space="preserve">
+    <value>download</value>
+  </data>
+  <data name="ImageStatusDownloaded" xml:space="preserve">
+    <value>downloaded</value>
+  </data>
+  <data name="ImageStatusDownloading" xml:space="preserve">
+    <value>downloading</value>
+  </data>
+  <data name="ImageStatusFailAdd" xml:space="preserve">
+    <value>Failed to add</value>
+  </data>
+  <data name="ImageStatusFailDownload" xml:space="preserve">
+    <value>Failed to download</value>
+  </data>
+  <data name="MsgAllowDomainFilter" xml:space="preserve">
+    <value>Would you like  to  exclude this domain when you search?</value>
+  </data>
+  <data name="MsgCheckingLocation" xml:space="preserve">
+    <value>Checking the current position.</value>
+  </data>
+  <data name="MsgCityEx" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MsgConfirmUseLocation" xml:space="preserve">
+    <value>This app accesses your phone's location. Is that ok?</value>
+  </data>
+  <data name="MsgEnterCity" xml:space="preserve">
+    <value>Enter City.</value>
+  </data>
+  <data name="MsgEnterSearchKeyword" xml:space="preserve">
+    <value>Enter a keyword to search for.</value>
+  </data>
+  <data name="MsgEnteryAsEng" xml:space="preserve">
+    <value>If your site is in the U.S. You can search by zip code. Else you can search by GPS location.</value>
+  </data>
+  <data name="MsgErrorWeatherServerMsg" xml:space="preserve">
+    <value>Error has occurred in the message received from the weather server.</value>
+  </data>
+  <data name="MsgFailAddLockscreen" xml:space="preserve">
+    <value>Could not be added to the list of the lock screen. cause : {0}</value>
+  </data>
+  <data name="MsgFailAddMaxCount" xml:space="preserve">
+    <value>Lock screen image is a maximum of {0}. To add more, please delete the existing lock screen image.</value>
+  </data>
+  <data name="MsgFailLocationService" xml:space="preserve">
+    <value>Location is disabled in phone settings. Enable location service?</value>
+  </data>
+  <data name="MsgFailSaveImage" xml:space="preserve">
+    <value>Failed to save the image. cause : {0}</value>
+  </data>
+  <data name="MsgFailWeatherService" xml:space="preserve">
+    <value>Weather service is temporarily unavailable. Please try again in a few minutes.</value>
+  </data>
+  <data name="MsgNoResultCity" xml:space="preserve">
+    <value>No result found.</value>
+  </data>
+  <data name="MsgNotSupportWeatherLocation" xml:space="preserve">
+    <value>This area is not provided by the real-time weather.</value>
+  </data>
+  <data name="MsgQueryLiveWeather" xml:space="preserve">
+    <value>Loading weather...</value>
+  </data>
+  <data name="MsgSuccessAddLockscreen" xml:space="preserve">
+    <value>Has been added to the list of the lock screen.</value>
+  </data>
+  <data name="MsgSuccessSaveImage" xml:space="preserve">
+    <value>The image has been saved.</value>
+  </data>
+  <data name="MsgWrongImage" xml:space="preserve">
+    <value>Already been deleted or can not be loaded image.</value>
+  </data>
+  <data name="Album" xml:space="preserve">
+    <value>album</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>search</value>
+  </data>
+  <data name="SelectPicture" xml:space="preserve">
+    <value>select picture</value>
+  </data>
+  <data name="SettingGroupBingCommon" xml:space="preserve">
+    <value>bing common</value>
+  </data>
+  <data name="SettingGroupBingSearch" xml:space="preserve">
+    <value>bing search</value>
+  </data>
+  <data name="Capital" xml:space="preserve">
+    <value>Washington, D.C.</value>
+  </data>
+  <data name="HideMenu" xml:space="preserve">
+    <value>Hide from menu</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>menu</value>
+  </data>
+  <data name="LockscreenItemBackgroundColor" xml:space="preserve">
+    <value>Background color of items</value>
+  </data>
+  <data name="LockscreenItemBackgroundOpacity" xml:space="preserve">
+    <value>Background opacity of items ({0}%)</value>
+  </data>
+  <data name="LockscreenItemForegroundColor" xml:space="preserve">
+    <value>Foreground color of items</value>
+  </data>
+  <data name="LockscreenItemForegroundOpacity" xml:space="preserve">
+    <value>Foreground opacity of items ({0}%)</value>
+  </data>
+  <data name="AccentColor" xml:space="preserve">
+    <value>current theme</value>
+  </data>
+  <data name="BingWeb" xml:space="preserve">
+    <value>image search</value>
+  </data>
+  <data name="ImageStatusAdding" xml:space="preserve">
+    <value>Adding...</value>
+  </data>
+  <data name="ImageStatusFailSave" xml:space="preserve">
+    <value>Failed to save</value>
+  </data>
+  <data name="ImageStatusTimeOut" xml:space="preserve">
+    <value>Time out</value>
+  </data>
+  <data name="ImageStatusAdd" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="ColorChrome" xml:space="preserve">
+    <value>chrome</value>
+  </data>
+  <data name="ColorTransparent" xml:space="preserve">
+    <value>transparent</value>
+  </data>
+  <data name="LockscreenItemBackgroundTemplate" xml:space="preserve">
+    <value>Lock screen template</value>
+  </data>
+  <data name="Battery" xml:space="preserve">
+    <value>battery</value>
+  </data>
+  <data name="LockscreenBackgroundItemSeparation" xml:space="preserve">
+    <value>Background separation of items </value>
+  </data>
+  <data name="LockscreenNoWeatherData" xml:space="preserve">
+    <value>Weather in the region that are retrieved from a weather menu will be displayed here.</value>
+  </data>
+  <data name="ColorAmber" xml:space="preserve">
+    <value>Amber</value>
+  </data>
+  <data name="ColorBrown" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="ColorCobalt" xml:space="preserve">
+    <value>Cobalt</value>
+  </data>
+  <data name="ColorCrimson" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="ColorCyan" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="ColorEmerald" xml:space="preserve">
+    <value>Emerald</value>
+  </data>
+  <data name="ColorGreen" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="ColorIndigo" xml:space="preserve">
+    <value>Indigo</value>
+  </data>
+  <data name="ColorLightGray" xml:space="preserve">
+    <value>Light Gray</value>
+  </data>
+  <data name="ColorLime" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="ColorMagenta" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="ColorMauve" xml:space="preserve">
+    <value>Mauve</value>
+  </data>
+  <data name="ColorOlive" xml:space="preserve">
+    <value>Olive</value>
+  </data>
+  <data name="ColorOrange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="ColorPink" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="ColorRed" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="ColorSienna" xml:space="preserve">
+    <value>Sienna</value>
+  </data>
+  <data name="ColorSteel" xml:space="preserve">
+    <value>Steel</value>
+  </data>
+  <data name="ColorTeal" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="ColorViolet" xml:space="preserve">
+    <value>Violet</value>
+  </data>
+  <data name="ColorYellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="BuyApp" xml:space="preserve">
+    <value>Buy the full version</value>
+  </data>
+  <data name="FixSkinColor" xml:space="preserve">
+    <value>Skin color</value>
+  </data>
+  <data name="ImageSettings" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="LivetileCalendarBackgroundColor" xml:space="preserve">
+    <value>Background color of calendar live tile</value>
+  </data>
+  <data name="LivetileWeatherBackgroundColor" xml:space="preserve">
+    <value>Background color of weather live tile</value>
+  </data>
+  <data name="ProtectiveColor" xml:space="preserve">
+    <value>Protective coloration</value>
+  </data>
+  <data name="SkinImage" xml:space="preserve">
+    <value>Random background image</value>
+  </data>
+  <data name="UpdateIntervalLivetile" xml:space="preserve">
+    <value>Update interval for live tiles</value>
+  </data>
+  <data name="UpdateIntervalLockscreen" xml:space="preserve">
+    <value>Update interval for lock screen</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="MsgConfirmLockscreenUpdate" xml:space="preserve">
+    <value>Would you like  to change lock screen periodically ?</value>
+  </data>
+  <data name="UpdateIntervalWeather" xml:space="preserve">
+    <value>Update interval for weather</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>week</value>
+  </data>
+  <data name="MsgFailChangeLockscreen" xml:space="preserve">
+    <value>An error occurred and you can not change the lock screen.</value>
+  </data>
+  <data name="MsgSuccessChangeLockscreen" xml:space="preserve">
+    <value>Changed lock screen.</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>today</value>
+  </data>
+  <data name="MsgNeedEditLockscreen" xml:space="preserve">
+    <value>Editing is required.</value>
+  </data>
+  <data name="MsgEditedAutomatically" xml:space="preserve">
+    <value>Image for the lock screen is automatically generated. Would you like to save?</value>
+  </data>
+  <data name="MsgCanceledAddImage" xml:space="preserve">
+    <value>Adding images partially canceled.</value>
+  </data>
+  <data name="MsgCanceledDownloadImage" xml:space="preserve">
+    <value>Downloading images partially canceled.</value>
+  </data>
+  <data name="MsgIsCancleAddImage" xml:space="preserve">
+    <value>The image is being added to the list. Are you sure you want to cancel?</value>
+  </data>
+  <data name="MsgIsCancleDownloadImage" xml:space="preserve">
+    <value>Selected images being downloaded. Are you sure you want to cancel?</value>
+  </data>
+  <data name="MsgWaitAddImage" xml:space="preserve">
+    <value>The image is being added to the list. Please wait.</value>
+  </data>
+  <data name="MsgWaitDownloadImage" xml:space="preserve">
+    <value>Selected images being downloaded. Please wait.</value>
+  </data>
+  <data name="MsgSetFirstImageToLockscreen" xml:space="preserve">
+    <value>There are no images currently specified lock screen. Would you like to lock the screen in the first image?</value>
+  </data>
+  <data name="Appointment" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="AppointmentCount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FrontSide" xml:space="preserve">
+    <value>(front)</value>
+  </data>
+  <data name="RearSide" xml:space="preserve">
+    <value>(back)</value>
+  </data>
+  <data name="ShortcutSettingsLockscreen" xml:space="preserve">
+    <value>Lockscreen settings</value>
+  </data>
+  <data name="SystemSettings" xml:space="preserve">
+    <value>System Settings</value>
+  </data>
+  <data name="LivetileBatteryBackgroundColor" xml:space="preserve">
+    <value>Background color of battery live tile</value>
+  </data>
+  <data name="PinBatteryLivetile" xml:space="preserve">
+    <value>battery tile</value>
+  </data>
+  <data name="PinCalendarLivetile" xml:space="preserve">
+    <value>calendar tile</value>
+  </data>
+  <data name="PinWeatherLivetile" xml:space="preserve">
+    <value>weather tile</value>
+  </data>
+  <data name="MsgPinLivetile" xml:space="preserve">
+    <value>Would you like  to add the {0} on the start screen?</value>
+  </data>
+  <data name="MsgUnPinLivetile" xml:space="preserve">
+    <value>Would you like  to remove the {0} on the start screen?</value>
+  </data>
+  <data name="LivetileBatteryRemaining" xml:space="preserve">
+    <value>Battery remaining</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="MsgDisabledBackgroundAgent" xml:space="preserve">
+    <value>Background agents for this application have been disabled by the user.</value>
+  </data>
+  <data name="MsgExpiredTrial" xml:space="preserve">
+    <value>The trial period has expired. Would you like  to adopt a chameleon?</value>
+  </data>
+  <data name="MsgSearchMaxCount" xml:space="preserve">
+    <value>You can search up to 5 times a day maximum.</value>
+  </data>
+  <data name="RandomLivetileColor" xml:space="preserve">
+    <value>All background colors - Random</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="AppCategoryHere" xml:space="preserve">
+    <value>here apps</value>
+  </data>
+  <data name="AppKeyNokiaHereCityLens" xml:space="preserve">
+    <value>HERE City Lens</value>
+  </data>
+  <data name="AppKeyNokiaHereDrivePlus" xml:space="preserve">
+    <value>HERE Drive+</value>
+  </data>
+  <data name="AppKeyNokiaHereMaps" xml:space="preserve">
+    <value>HERE Maps</value>
+  </data>
+  <data name="AppKeyNokiaHereTransit" xml:space="preserve">
+    <value>HERE Transit</value>
+  </data>
+  <data name="LockscreenNoWeatherBackData" xml:space="preserve">
+    <value>Forecast in the region that are retrieved from a weather menu will be displayed here.</value>
+  </data>
+  <data name="AppCategoryImage" xml:space="preserve">
+    <value>image apps</value>
+  </data>
+  <data name="AppKeyNokiaNokiaRefocus" xml:space="preserve">
+    <value>Nokia Refocus</value>
+  </data>
+  <data name="AppKeySamsungAppFolder" xml:space="preserve">
+    <value>App Folder</value>
+  </data>
+  <data name="ManufacturerApps" xml:space="preserve">
+    <value>system &amp; ms app list</value>
+  </data>
+  <data name="AppbarMenuDay" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="AppbarMenuNight" xml:space="preserve">
+    <value>night</value>
+  </data>
+  <data name="WeatherToday" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="Universe" xml:space="preserve">
+    <value>universe</value>
+  </data>
+  <data name="ImageStatusPending" xml:space="preserve">
+    <value>pending</value>
+  </data>
+  <data name="MsgAddDomainFilter" xml:space="preserve">
+    <value>Tap to exclude this image at all times.</value>
+  </data>
+  <data name="MsgNoDownloadItem" xml:space="preserve">
+    <value>No Downloads in progress</value>
+  </data>
+  <data name="MsgRequiredDataNetwork" xml:space="preserve">
+    <value>Cellular data connection or WiFi network is required. WiFi settings would you like to do?</value>
+  </data>
+  <data name="NetworkStatusNameCellular" xml:space="preserve">
+    <value>Cellular Network</value>
+  </data>
+  <data name="NetworkStatusNameDisconnect" xml:space="preserve">
+    <value>Disconnected Network</value>
+  </data>
+  <data name="NetworkStatusNameNone" xml:space="preserve">
+    <value>No Network</value>
+  </data>
+  <data name="NetworkStatusNamePC" xml:space="preserve">
+    <value>Desktop Passthru</value>
+  </data>
+  <data name="NetworkStatusNameWiFi" xml:space="preserve">
+    <value>Wi-Fi Network</value>
+  </data>
+  <data name="TitleDownloadItem" xml:space="preserve">
+    <value>downloads</value>
+  </data>
+  <data name="ImageStatusCanceled" xml:space="preserve">
+    <value>canceled</value>
+  </data>
+  <data name="LockscreenEditPreview" xml:space="preserve">
+    <value>Edit image &amp; preview</value>
+  </data>
+  <data name="NoForecast" xml:space="preserve">
+    <value>weather</value>
+  </data>
+  <data name="ApplicationAbout" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="AboutCredits" xml:space="preserve">
+    <value>credits</value>
+  </data>
+  <data name="AboutDesign" xml:space="preserve">
+    <value>design</value>
+  </data>
+  <data name="AboutDesigner" xml:space="preserve">
+    <value>Jooyong, Yook</value>
+  </data>
+  <data name="AboutDeveloper" xml:space="preserve">
+    <value>Jooyong, Yook</value>
+  </data>
+  <data name="AboutDevelopment" xml:space="preserve">
+    <value>development</value>
+  </data>
+  <data name="AboutFacebook" xml:space="preserve">
+    <value>facebook</value>
+  </data>
+  <data name="AboutFeedback" xml:space="preserve">
+    <value>support &amp; feedback</value>
+  </data>
+  <data name="AboutLibraryCreators" xml:space="preserve">
+    <value>Thanks to the creators of the following libraries</value>
+  </data>
+  <data name="AboutRateReview" xml:space="preserve">
+    <value>rate &amp; review</value>
+  </data>
+  <data name="AboutShare" xml:space="preserve">
+    <value>share this app</value>
+  </data>
+  <data name="AboutSpecialPeople1" xml:space="preserve">
+    <value>Bomi, Jung</value>
+  </data>
+  <data name="AboutSpecialPeople2" xml:space="preserve">
+    <value>Jeongryeong, Ha</value>
+  </data>
+  <data name="AboutSpecialPeople3" xml:space="preserve">
+    <value>Gilhyun, Choi</value>
+  </data>
+  <data name="AboutSpecialThanks" xml:space="preserve">
+    <value>Special thanks</value>
+  </data>
+  <data name="AboutUserVoice" xml:space="preserve">
+    <value>user voice</value>
+  </data>
+  <data name="AboutVersion" xml:space="preserve">
+    <value>version</value>
+  </data>
+  <data name="AboutWhatsNew" xml:space="preserve">
+    <value>what's new</value>
+  </data>
+  <data name="UpdateHistory10001" xml:space="preserve">
+    <value>Initial release</value>
+  </data>
+  <data name="UpdateHistory10002" xml:space="preserve">
+    <value>Live weather supported</value>
+  </data>
+  <data name="UpdateHistory10003" xml:space="preserve">
+    <value>Live calendar supported</value>
+  </data>
+  <data name="UpdateHistory10004" xml:space="preserve">
+    <value>Live tiles supported\n• Weather, Calendar, Battery</value>
+  </data>
+  <data name="UpdateHistory10005" xml:space="preserve">
+    <value>Lock screen supported\n• Weather, Calendar, Battery\n• Phone picture\n• Today's bing\n• Bing image search</value>
+  </data>
+  <data name="UpdateHistory10006" xml:space="preserve">
+    <value>Manufacturer's app list supported\n• Nokia\n• Samsung\n• HTC</value>
+  </data>
+  <data name="UpdateHistory11101" xml:space="preserve">
+    <value>Calendar layout modification\n• Adjust position of today's background</value>
+  </data>
+  <data name="UpdateHistory11102" xml:space="preserve">
+    <value>Reliability improvements</value>
+  </data>
+  <data name="UpdateHistory20001" xml:space="preserve">
+    <value>App launcher icon changed</value>
+  </data>
+  <data name="UpdateHistory20002" xml:space="preserve">
+    <value>Pages\n• App bar menu\n + About page \n• Add multiple images menu\n  + Image downloader page\n  + Today's Nasa\n  + Nasa chandra x-ray observatory images</value>
+  </data>
+  <data name="UpdateHistory20003" xml:space="preserve">
+    <value>Features\n• Weather menu\n  + Localization &amp; night forecasts</value>
+  </data>
+  <data name="UpdateHistory20004" xml:space="preserve">
+    <value>Optimization\n• Scheduler\n• UI &amp; UX</value>
+  </data>
+  <data name="UpdateHistory20005" xml:space="preserve">
+    <value>Reduction\n• Network packets</value>
+  </data>
+  <data name="UpdateHistory20006" xml:space="preserve">
+    <value>Improvement\n• App loading speed\n• Quality of lock screen\n• Image downloading speed</value>
+  </data>
+  <data name="UpdateHistory20007" xml:space="preserve">
+    <value>'Lock screen using' checkbox bug</value>
+  </data>
+  <data name="UpdateHistory20008" xml:space="preserve">
+    <value>Lock screen and Chameleon of the synchronization bug</value>
+  </data>
+  <data name="UpdateHistory20009" xml:space="preserve">
+    <value>Edited image automatically, the display items are out of small bug</value>
+  </data>
+  <data name="AboutAbout" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="UpdateHistory20101" xml:space="preserve">
+    <value>Forecast icon &amp; title bug</value>
+  </data>
+  <data name="WeatherIcon" xml:space="preserve">
+    <value>Weather icon</value>
+  </data>
+  <data name="WeatherIconPackNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="WeatherIconPackSimple01" xml:space="preserve">
+    <value>Simple</value>
+  </data>
+  <data name="UpdateHistory21001" xml:space="preserve">
+    <value>Lock screen Preview\n• preview window and the edit screen show overlap</value>
+  </data>
+  <data name="UpdateHistory21002" xml:space="preserve">
+    <value>Manufacturer's App\n• Hidden mode, change the weather app bar does not display the menu</value>
+  </data>
+  <data name="UpdateHistory21003" xml:space="preserve">
+    <value>App capacity optimization 10MB ► 6MB</value>
+  </data>
+  <data name="UpdateHistory21004" xml:space="preserve">
+    <value>Settings button of app bar\n• Set the current screen page load</value>
+  </data>
+  <data name="UpdateHistory21005" xml:space="preserve">
+    <value>Manufacturer's App\n• Nokia music ► Nokia mix radio</value>
+  </data>
+  <data name="UpdateHistory21006" xml:space="preserve">
+    <value>Apply a simple weather icons (can also choose an original icon)</value>
+  </data>
+  <data name="UpdateHistory21201" xml:space="preserve">
+    <value>The temperature of the weather menu shown cut in some cases.</value>
+  </data>
+  <data name="UpdateHistory21202" xml:space="preserve">
+    <value>Sometimes the app quits when entering the Settings menu</value>
+  </data>
+  <data name="AppKeyMicrosoftAlphajax" xml:space="preserve">
+    <value>AlphaJax</value>
+  </data>
+  <data name="AppKeyMicrosoftBingFinance" xml:space="preserve">
+    <value>Bing Finance</value>
+  </data>
+  <data name="AppKeyMicrosoftBingNews" xml:space="preserve">
+    <value>Bing News</value>
+  </data>
+  <data name="AppKeyMicrosoftBingSports" xml:space="preserve">
+    <value>Bing Sports</value>
+  </data>
+  <data name="AppKeyMicrosoftBingWeather" xml:space="preserve">
+    <value>Bing Weather</value>
+  </data>
+  <data name="AppKeyMicrosoftBreeze" xml:space="preserve">
+    <value>Breeze</value>
+  </data>
+  <data name="AppKeyMicrosoftFacebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="AppKeyMicrosoftFlowerz" xml:space="preserve">
+    <value>Flowerz</value>
+  </data>
+  <data name="AppKeyMicrosoftFreshPaint" xml:space="preserve">
+    <value>Fresh Paint</value>
+  </data>
+  <data name="AppKeyMicrosoftGroupme" xml:space="preserve">
+    <value>GroupMe</value>
+  </data>
+  <data name="AppKeyMicrosoftHaloLite" xml:space="preserve">
+    <value>Halo: SA Lite</value>
+  </data>
+  <data name="AppKeyMicrosoftMinesweeper" xml:space="preserve">
+    <value>Minesweeper</value>
+  </data>
+  <data name="AppKeyMicrosoftPdfReader" xml:space="preserve">
+    <value>PDF Reader</value>
+  </data>
+  <data name="AppKeyMicrosoftPhotosynth" xml:space="preserve">
+    <value>Photosynth</value>
+  </data>
+  <data name="AppKeyMicrosoftSkydrive" xml:space="preserve">
+    <value>OneDrive</value>
+  </data>
+  <data name="AppKeyMicrosoftSkype" xml:space="preserve">
+    <value>Skype</value>
+  </data>
+  <data name="AppKeyMicrosoftSudoku" xml:space="preserve">
+    <value>Sudoku</value>
+  </data>
+  <data name="AppKeyMicrosoftTranslator" xml:space="preserve">
+    <value>Translator</value>
+  </data>
+  <data name="AppKeyMicrosoftWeather" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="AppKeyMicrosoftWordament" xml:space="preserve">
+    <value>Wordament</value>
+  </data>
+  <data name="AppKeyMicrosoftXbox360Smartglass" xml:space="preserve">
+    <value>Xbox 360 SmartGlass</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxExtras" xml:space="preserve">
+    <value>Xbox Extras</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxMusic" xml:space="preserve">
+    <value>Xbox Music</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxOneSmartglass" xml:space="preserve">
+    <value>Xbox One SmartGlass</value>
+  </data>
+  <data name="AppKeyMicrosoftXboxVideo" xml:space="preserve">
+    <value>Xbox Video</value>
+  </data>
+  <data name="AppKeyMicrosoftYoutube" xml:space="preserve">
+    <value>YouTube</value>
+  </data>
+  <data name="AppKeyNokiaNokiaNfcWriter" xml:space="preserve">
+    <value>Nokia NFC Writer</value>
+  </data>
+  <data name="AppKeyVelostepChameleon" xml:space="preserve">
+    <value>Chameleon</value>
+  </data>
+  <data name="AppKeyVelostepManufacturerApps" xml:space="preserve">
+    <value>Manufacturer Apps</value>
+  </data>
+  <data name="AppKeyVelostepWowpad" xml:space="preserve">
+    <value>WowPad Full Version</value>
+  </data>
+  <data name="AppKeyMicrosoftAcademicSearch" xml:space="preserve">
+    <value>Academic Search</value>
+  </data>
+  <data name="AppKeyMicrosoftBlink" xml:space="preserve">
+    <value>BLINK</value>
+  </data>
+  <data name="AppKeyMicrosoftFaceMask" xml:space="preserve">
+    <value>Face Mask</value>
+  </data>
+  <data name="AppKeyMicrosoftFaceSwap" xml:space="preserve">
+    <value>Face Swap</value>
+  </data>
+  <data name="AppKeyMicrosoftFaceTouch" xml:space="preserve">
+    <value>Face Touch</value>
+  </data>
+  <data name="AppKeyMicrosoftLevel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="AppKeyMicrosoftNetworkSpeedTest" xml:space="preserve">
+    <value>Network Speed Test</value>
+  </data>
+  <data name="AppKeyMicrosoftOfficeRemote" xml:space="preserve">
+    <value>Office Remote</value>
+  </data>
+  <data name="AppKeyMicrosoftSocl" xml:space="preserve">
+    <value>socl</value>
+  </data>
+  <data name="AppKeyMicrosoftUnitConverter" xml:space="preserve">
+    <value>Unit Converter</value>
+  </data>
+  <data name="AppKeyMicrosoftYammer" xml:space="preserve">
+    <value>Yammer</value>
+  </data>
+  <data name="AppCategoryBing" xml:space="preserve">
+    <value>bing apps</value>
+  </data>
+  <data name="AppCategoryMsResearch" xml:space="preserve">
+    <value>Microsoft Research</value>
+  </data>
+  <data name="AppCategoryMsStudio" xml:space="preserve">
+    <value>Microsoft Studios™</value>
+  </data>
+  <data name="AppCategorySocial" xml:space="preserve">
+    <value>social apps</value>
+  </data>
+  <data name="AppCategoryFree" xml:space="preserve">
+    <value>free apps</value>
+  </data>
+  <data name="AppCategoryPaid" xml:space="preserve">
+    <value>paid apps</value>
+  </data>
+  <data name="AppCategoryTry" xml:space="preserve">
+    <value>try &amp; buy</value>
+  </data>
+  <data name="AppKeyVelostepWowpadAmk" xml:space="preserve">
+    <value>WowPad MK (Advertising)</value>
+  </data>
+  <data name="AppKeyVelostepWowpadAtk" xml:space="preserve">
+    <value>WowPad TK (Advertising)</value>
+  </data>
+  <data name="AppKeyVelostepWowpadMk" xml:space="preserve">
+    <value>WowPad MK</value>
+  </data>
+  <data name="AppKeyVelostepWowpadTk" xml:space="preserve">
+    <value>WowPad TK</value>
+  </data>
+  <data name="UpdateHistory22001" xml:space="preserve">
+    <value>System apps\n• Move the application menu bar\n• Add Microsoft apps\n• Add Velostep apps\n• Manufacturer apps \n + Nokia ► NFC Writer\n + Samsung ► Family Story</value>
+  </data>
+  <data name="UpdateHistory22002" xml:space="preserve">
+    <value>Disable the screen while retrieving the the weather</value>
+  </data>
+  <data name="UpdateHistory22003" xml:space="preserve">
+    <value>Check the network connection</value>
+  </data>
+  <data name="UpdateHistory22101" xml:space="preserve">
+    <value>Lock screen, Live tiles\n• Update bug in scheduled task</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>close</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>exit</value>
+  </data>
+  <data name="Flashlight" xml:space="preserve">
+    <value>flashlight</value>
+  </data>
+  <data name="FlashlightOff" xml:space="preserve">
+    <value>off</value>
+  </data>
+  <data name="FlashlightOn" xml:space="preserve">
+    <value>on</value>
+  </data>
+  <data name="FlickeringFrequency" xml:space="preserve">
+    <value>flicker frequency</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>main page</value>
+  </data>
+  <data name="UseToggleSwitch" xml:space="preserve">
+    <value>toggle switch</value>
+  </data>
+  <data name="MsgFailGetLockscreen" xml:space="preserve">
+    <value>An error was detected within the system. To set the lock screen, you may need to restart the system or "Settings&gt; Lock Screen" to check out.</value>
+  </data>
+  <data name="MsgFailShortGetLockscreen" xml:space="preserve">
+    <value>Lock screen error! Required reboot!</value>
+  </data>
+  <data name="UpdateHistory23001" xml:space="preserve">
+    <value>Flashlight supported\n• Battery &amp; Flashlight live tiles\n• Flashlight page</value>
+  </data>
+  <data name="UpdateHistory23002" xml:space="preserve">
+    <value>Minor UI bugs</value>
+  </data>
+  <data name="UpdateHistory23101" xml:space="preserve">
+    <value>Live tiles\n• Update bug in scheduled task</value>
+  </data>
+  <data name="UpdateHistory23102" xml:space="preserve">
+    <value>Lock screen, Live tiles\n• Position of appointment </value>
+  </data>
+  <data name="UpdateHistory23201" xml:space="preserve">
+    <value>Lock screen image edit page\n• Image cropping bug (white line on left side)</value>
+  </data>
+  <data name="AppKeyNokiaAppFolder" xml:space="preserve">
+    <value>App Folder</value>
+  </data>
+  <data name="AppKeyNokiaCallSmsFilter" xml:space="preserve">
+    <value>call+SMS filter</value>
+  </data>
+  <data name="AppKeyNokiaGlance" xml:space="preserve">
+    <value>glance</value>
+  </data>
+  <data name="BatteryFull" xml:space="preserve">
+    <value>Full</value>
+  </data>
+  <data name="BatteryFullWPDefault" xml:space="preserve">
+    <value>Windows phone UX (99)</value>
+  </data>
+  <data name="LivetileBatteryFullDisplay" xml:space="preserve">
+    <value>Battery Charge complete indication</value>
+  </data>
+  <data name="UpdateHistory23501" xml:space="preserve">
+    <value>Live tiles\n• Battery charge complete indication (Full, 99)</value>
+  </data>
+  <data name="UpdateHistory23502" xml:space="preserve">
+    <value>System apps\n• Manufacturer apps\n + Nokia ► call+SMS filter, glance, App Folder</value>
+  </data>
+  <data name="AppKeyMicrosoftBingFoodDrink" xml:space="preserve">
+    <value>Bing Food &amp; Drink</value>
+  </data>
+  <data name="AppKeyMicrosoftBingHealthFitness" xml:space="preserve">
+    <value>Bing Health &amp; Fitness</value>
+  </data>
+  <data name="AppKeyMicrosoftBingTravel" xml:space="preserve">
+    <value>Bing Travel</value>
+  </data>
+  <data name="AppKeyVelostepCcplayer" xml:space="preserve">
+    <value>CCPlayer</value>
+  </data>
+  <data name="AppKeyVelostepCcplayerFree" xml:space="preserve">
+    <value>CCPlayer Free</value>
+  </data>
+  <data name="UpdateHistory23601" xml:space="preserve">
+    <value>System apps\n• Microsoft apps\n + Bing Travel, Food, Health\n• Velostep apps\n + CCPlayer, CCPlayer Free</value>
+  </data>
+  <data name="UpdateHistory23602" xml:space="preserve">
+    <value>Adjust position of appointment on the Lockscreen</value>
+  </data>
+  <data name="LivetileWeatherFontSize" xml:space="preserve">
+    <value>Font size of weather live tile</value>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="UpdateHistory23701" xml:space="preserve">
+    <value>Live tiles\n• Adjust font size for the location &amp; description of weather (Settings page)</value>
+  </data>
+  <data name="AppKeySamsungFamilyStory" xml:space="preserve">
+    <value>Family Story</value>
+  </data>
+  <data name="AppKeySamsungStoryAlbum" xml:space="preserve">
+    <value>Story Album</value>
+  </data>
+  <data name="UpdateHistory23801" xml:space="preserve">
+    <value>System apps\n• Samsung apps\n + Stroy Album</value>
+  </data>
+  <data name="FontWeight" xml:space="preserve">
+    <value>Font weight</value>
+  </data>
+  <data name="LivetileFontWeight" xml:space="preserve">
+    <value>Font weight of weather, calendar tile</value>
+  </data>
+  <data name="UpdateHistory24001" xml:space="preserve">
+    <value>Lock screen\n• Fixed bug where the opacity of the displayed items</value>
+  </data>
+  <data name="UpdateHistory24002" xml:space="preserve">
+    <value>Lock screen, Live tiles\n• Supported font weight</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UpdateHistory24101" xml:space="preserve">
+    <value>System apps\n• Fixed a bug that I can not search for manufacturers</value>
+  </data>
+  <data name="UpdateHistory24201" xml:space="preserve">
+    <value>Improve compatibility with other lock screen apps</value>
+  </data>
+  <data name="UpdateHistory24301" xml:space="preserve">
+    <value>Live tiles\n• Supported transparent background color of tiles</value>
+  </data>
+  <data name="LocationServices" xml:space="preserve">
+    <value>Location services</value>
+  </data>
+  <data name="MsgUseLocationServices" xml:space="preserve">
+    <value>Use the location setting is disabled. Are you sure you want to enable?</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="MsgApplyingLockscreen" xml:space="preserve">
+    <value>Applying lock screen ...</value>
+  </data>
+  <data name="MsgCreatingPreview" xml:space="preserve">
+    <value>Creating preview ...</value>
+  </data>
+  <data name="UpdateHistory24401" xml:space="preserve">
+    <value>Applied MS app policy (Location service &amp; privacy policy)</value>
+  </data>
+  <data name="UpdateHistory24402" xml:space="preserve">
+    <value>Applied loading panel (weather, lockscreen, preview)</value>
+  </data>
+</root>
